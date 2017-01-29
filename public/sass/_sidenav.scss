@@ -14,16 +14,27 @@ side navigation
 }
 
 #mainContent {
-	min-height: 450px;
+	
 	#mainmiddle1 {
 		padding: 0;
 		section.apiarea {
+			position: relative;
 			img  {
-				max-width: 100%;
+				max-width: 27%;
+				margin-left: 15px;
+				display: inline-block;
+				position: absolute;
+				left: 5px;
+				top: 10px;
+
 			}//img
+			background-color: $botfoot;
 			margin:0;
-			min-height: 450px;
-			border:1px solid purple;
+			min-height: 350px;
+			border-bottom-left-radius: 0px;
+    		border-bottom-right-radius: 12px;
+			border:1px solid darken($purple,15);  /*440144*/
+
 		}//section apiarea
 		.sidenavL {
 			.closebtn {
@@ -46,7 +57,7 @@ side navigation
 			a {
 				padding: 8px 8px 8px 32px;
 			    text-decoration: none;
-			    font-size: 21px;
+			    font-size: 16px;
 			    color: #fbfbfb;
 			    display: block;
 			    transition: 0.3s
@@ -58,6 +69,8 @@ side navigation
 
 		}//sidenavL
 		#mainL {
+			display: inline-block;
+			
 			.panopen {
 				position: absolute;
 				left:-9999px;

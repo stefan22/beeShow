@@ -9,16 +9,19 @@ var footersYear = function() {
 
 function openNav() {
     var aprire = document.getElementById('aprire');
-    document.getElementById("mySidenavL").style.width = "350px";
-    document.getElementById("mainL").style.marginLeft = "350px";
+    document.getElementById("mySidenavL").style.width = "285px";
+    document.getElementById("mainL").style.marginLeft = "285px";
+    document.getElementById('bee6').style.opacity = "0";
     
+
     //aprire
     aprire.classList.add('panclose');
     aprire.classList.add('panopen');
-    //jenkins
-    document.getElementById('jenkins').style.paddingLeft = "9em";
-    document.getElementById('jenkins').style.maxWidth = "325px";
-    document.getElementById('jenkins').style.transition = "slide-down,width,2s";
+    //bee6
+    document.getElementById('bee6').style.paddingLeft = "9em";
+    document.getElementById('bee6').style.maxWidth = "285px";
+
+    document.getElementById('bee6').style.transition = "slide-down,width,2s";
 
     
 
@@ -31,14 +34,19 @@ function closeNav() {
     document.getElementById("mySidenavL").style.width = "0";
     document.getElementById("mainL").style.marginLeft= "0";
     document.body.style.backgroundColor = "white";
+    document.getElementById('bee6').style.opacity = "1";
     //aprire
     aprire.classList.remove('panopen');
     aprire.classList.add('panclose');
+    
 
-    //jenkins
-    document.getElementById('jenkins').style.paddingLeft = "0";
-    document.getElementById('jenkins').style.maxWidth = "230px";
-    document.getElementById('jenkins').style.transition = "slide-up,width,3s";
+    //bee6  //230
+    document.getElementById('bee6').style.paddingLeft = "0";
+    document.getElementById('bee6').style.maxWidth = "90px";
+    document.getElementById('bee6').style.transition = "slide-up,width,2s";
+
+
+    
 }
 
 

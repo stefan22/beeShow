@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             match: [
               'bootstrap.css', 'reset.css','styles.css',
               'jquery.js','bootstrap.js','scripts.min.js',
-              'index.html'
+              'bee.js','index.html'
             ]
           },
           files: {
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
           sourceMapName: 'public/builds/assets/sourcemap.map'
         },
         builds: {
-          src:['public/js/scripts.js'],
+          src:['public/js/scripts.js','public/js/bee.js'],
           dest:'public/builds/js/scripts.min.js'
         }
 
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
         }, //confiFiles
 
         scripts: {
-          files: 'public/js/*.js',
+          files: ['public/js/scripts.js','public/js/bee.js'],
           tasks: ['uglify']  
         
         },//scripts

@@ -2,7 +2,7 @@
 ------------------------------------     */
 
 #brandbanner {
-    background-color: $darkred;
+    background-color: $purple;
     height: 3px;
     width: 100%;
     top:0;
@@ -14,15 +14,26 @@
 
 header#header {
     padding: 1em 0;
-    background: $white;
+    background: lighten($botfobg,6);
     @include small {}
     #logo {
         a {
             display: block;
-        }
-        img {
-            max-width: 230px;
-        } //img
+        
+            img#beetoplog {
+                max-width: 100px;
+                height: auto;
+                display: block;
+                opacity: .9;
+                border: 1px solid purple;
+                border-radius: 50%;
+                box-shadow: 1px 1px 2px 0px rgba(31, 3, 37, 0.9);
+            
+
+
+            } //img#beetoplog
+
+        }//a    
     } //logo
     #brandz {
         h1 {
@@ -54,17 +65,16 @@ header#header {
     } //brandz
 } //header
 #mainmenu {
-    min-height: 60px;
+    
     @include small {}
-    /* 72px;*/
+    min-height: 56px;
     background: #4d115a;
-    border-bottom: 2px solid #160c18;
    
     box-shadow: 0px 0px 1px 0px rgba(77, 17, 90, 0.35);
     $contrasted-dark-default: $lightred;
     .navbar {
         margin-bottom: 0;
-        min-height: 58px;
+        min-height: 56px;
         @include tablet {
             min-height: 52px;
         }
@@ -74,20 +84,21 @@ header#header {
     .navbar-default .navbar-form {
         border-color: #eaeaea;
         border-color: transparent;
+        border:none;
         background-color: #4d115a;
         .navbar-nav> {
             li {
                 a {
-                    color: $white;
+                    color: darken($white,10);
                     letter-spacing: .15px;
-                    font-size: 16px;
+                    font-size: 14px;
                     line-height: 168%;
-                    font-weight: lighter;
+                    font-weight: normal;
                     $contrasted-light-default: $white;
-                    text-shadow: 0 0 5px rgba(109, 37, 37, 0.5);
+                    
                     @extend %basefontSecondary;
                     &:hover {
-                        color: lighten($black, 2);
+                        color: $white;
                         text-decoration: underline;
                     } //hover
                     @include tablet {
@@ -100,6 +111,7 @@ header#header {
     } //navvar-default
     #primary-nav {
         ul {
+            border-top: 1px solid darken($purple,10);
             #nav-home a {
                 i.material-icons {
                     font-size: 14px;

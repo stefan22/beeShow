@@ -51,7 +51,54 @@ $font-secondary: 'Merriweather', serif, arial;
     vertical-align: middle;
 }
 
+/*
+------------------------------
+sticky footer
+------------------------------
+*/
 
+html {
+	width:100%;
+	height: 100%;
+	display: table;
+}
+
+body {
+	width: 100%;
+	display: table-cell;
+	min-height: 100%;
+}
+
+html,body {
+	margin:0;
+	padding: 0;
+}
+
+#mainWrapper {
+	height: 100%;
+	/* equal to footer height */
+  	margin-bottom: -300.64px;
+}
+
+#mainWrapper:after {
+	content: "";
+	display: block;
+}
+
+#mainFooter, #mainWrapper:after {
+	/*min-height: 300px;*/
+	 
+}
+
+#mainFooter {
+	margin-top:-300.64px;
+}
+
+/*
+-----------------------------
+	main headings
+-----------------------------
+*/
 
 h1,h2,h3,h4,h5,h6 {
 	@extend %basefontPrimary;	

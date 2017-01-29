@@ -3,9 +3,9 @@
 
 .footer#mainFooter {
     padding: 0 !important;
-    margin-top: -250px;
-    min-height: 295px;
-    clear: both;
+   
+    
+    
     box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 5px 3px 5px 2px rgba(15, 16, 2, 0.7);
     border-top: 1px solid #929292;
@@ -13,6 +13,7 @@
     #topfoot.container {
         /* dont add padding!*/
         #footer-content {
+            margin:3em 0;
             h5 {
                 margin-bottom: .75em;
                 @include xsmall {
@@ -25,18 +26,30 @@
             }
             #socialIcons {
                 p {
-                    margin-bottom: .75em;
+                    margin-bottom: 1.2em;
                     font-size: 13px;
                     @include small {
                         margin-bottom: 1em;
                     }//small
                 } //p
                 a {
+                    -moz-transition:  all 3s ease-in-out;;
+                    -webkit-transition: all 3s ease-in-out;;
+                    -o-transition:  all 3s ease-in-out;;
+                    transition: all 3s ease-in-out;;
                     display: inline-block;
                     margin-left: .5em;
-                    max-height: auto;
-                    max-width: 55px;
+                    max-height: 57px;
+                    max-width: 57px;
                     font-size: 13px;
+                    &:hover img {
+                        transform:scale(1.1);
+                        transform:scale(1.1);
+                        transform:scale(1.1);
+                    }//img
+                    
+                        
+                    
                     @include small {
                         max-width: 40px;
                         margin-left: 0;
@@ -52,6 +65,10 @@
                 } //a
             } //socialIcons
             #relatedLinks {
+
+                a {
+                    color:$purpleM;
+                } 
                 @include xsmall {
                     h5 {
                         font-size:20px;
@@ -61,6 +78,7 @@
                     }//h5   
                 }//xsmall
                 ul.related {
+                    padding:3px 0;
                     @include xsmall {
                         span {
                             display: none;
@@ -68,7 +86,7 @@
                     }//xsmall
                     li {
                         a {
-                            color: $lightred;
+                            color: $purpleM;
                             text-decoration: underline;
                             font-size: 13px;
                             vertical-align: text-bottom;
@@ -89,16 +107,16 @@
                 //empty
             }
             //moreAboutUs
-            padding-top:2em;
+         
             .subfoot {
-                margin-bottom: 3em;
+               
                 p {
                     color: lighten($black, 7);
                     font-size: 13px;
                 }
                 h5 {
                     .material-icons.md-dark {
-                        color: $lightred;
+                        color: $purpleM;
                         font-size: 22px;
                         line-height: 98%;
                         vertical-align: middle;
@@ -114,26 +132,25 @@
         } //footer-content
     } //topfoot.container
     #botfoot {
-        
-        box-shadow: -2px 1px 5px 0px #4d0702;
-        border-top: 1px solid #871c14;
-        background-color: #a62319;
-        border-top: 1px solid darken($lightred, 7);
-        background-color: $lightred;
-        box-shadow: -2px 1px 5px 0px #4d0702;
+        max-height: 74.25px;
         border-top: 1px solid #871c14;
         background-color: #a62319;
         border-top: 1px solid #180403;
-        background-color: #4d115a;
+        background-color: $botfoot;
         @include small {}
         .container {
             .row {
-                #bottomlogo img {
+                #bottomlogo  {
+                   padding:10px;
+                    img {
+                        max-width: 50px;
+                    }//img
                     @include small {
+                    img  {   
                         max-width: 60px !important;
                         display: inline-block;
                         vertical-align: middle;
-
+                    }//img    
                     }//small
                     @include xsmall {
                         padding-top: .3em;
@@ -142,10 +159,18 @@
                 .copyright {
                     text-align: right;
                     vertical-align: middle;
-                    line-height: 82px;
+                    line-height: 73.25px;
+                    height: 73.25px;
                     margin-bottom: 0;
                     font-size: 13px;
-                    color:lighten($white, 22);
+                    color:lighten($purpleM,5);
+                    .fcee  {
+                        vertical-align: text-top;
+                        line-height: 26px;
+                        font-size: 22px;
+                        color: darken($white,50);
+                    }//fcee
+                   
                     @include small {
                         line-height: 18px;
                         font-size: 12px;
@@ -159,10 +184,11 @@
                         font-size: 12px;
                     }//xsmall
                     .myself {
-                        color: darken($white,27);
+                        color: darken($white,36);
                         vertical-align: text-top;
-                        line-height: 20px;
+                        line-height: 22px;
                         font-size: 13px;
+                        
                         @include small {
                             font-size: 12px;
                             line-height: 18px;
@@ -176,25 +202,34 @@
                         vertical-align: text-top;
                         line-height: 20px;
                         margin-right: 2.5em;
+                        .city {
+                            color:darken($white,60);
+                        }
+                        .year {
+                            color:darken($white,50);
+                        }
                         @include small {
                             margin-right: 1em;
                             line-height: 18px;
                             .city {
                                 float:right;
+                                font-weight: bold;
                             }//a.city
                             .year {
                                 float:right;
+                                font-weight: bold;
+                                color:darken($white,20);
                             }//a.year
                             
                         }//small
                         @include xsmall {
                                 .city {
-                                    color:lighten($white, 22);
+                                    color:darken($white,5);
                                     float:right;
                                 }//city
                                 .year {
                                     float:right;
-                                    color:$lightgreen;
+                                    color:darken($white,5);
                                 }//year
                         }//xsmall
 

@@ -2,6 +2,8 @@
 =======================  */
 /* purple */
 /*dark purple h5*/
+/*purple menu*/
+/*botfoot*/
 /*  imports & applies Eric Meyer's Reset.css
 --------------------------------------------     */
 @import url("https://fonts.googleapis.com/css?family=Nobile");
@@ -125,7 +127,60 @@ body #mainWrapper #wrapper #top #skip #mainmenu .navbar-collapse .navbar-nav > l
   vertical-align: middle;
 }
 
+/*
+------------------------------
+sticky footer
+------------------------------
+*/
 /* line 60, ../../sass/_base.scss */
+html {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+/* line 66, ../../sass/_base.scss */
+body {
+  width: 100%;
+  display: table-cell;
+  min-height: 100%;
+}
+
+/* line 72, ../../sass/_base.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 77, ../../sass/_base.scss */
+#mainWrapper {
+  height: 100%;
+  /* equal to footer height */
+  margin-bottom: -300.64px;
+}
+
+/* line 83, ../../sass/_base.scss */
+#mainWrapper:after {
+  content: "";
+  display: block;
+}
+
+/* line 88, ../../sass/_base.scss */
+#mainFooter, #mainWrapper:after {
+  /*min-height: 300px;*/
+}
+
+/* line 93, ../../sass/_base.scss */
+#mainFooter {
+  margin-top: -300.64px;
+}
+
+/*
+-----------------------------
+	main headings
+-----------------------------
+*/
+/* line 107, ../../sass/_base.scss */
 h1 {
   font-size: 36px;
   line-height: 140%;
@@ -133,7 +188,7 @@ h1 {
   margin-bottom: .6em;
 }
 
-/* line 72, ../../sass/_base.scss */
+/* line 119, ../../sass/_base.scss */
 h2 {
   font-size: 32px;
   line-height: 140%;
@@ -141,7 +196,7 @@ h2 {
   margin-bottom: 0.5em;
 }
 
-/* line 81, ../../sass/_base.scss */
+/* line 128, ../../sass/_base.scss */
 h3 {
   font-size: 28px;
   line-height: 130%;
@@ -149,7 +204,7 @@ h3 {
   color: #a62319;
 }
 
-/* line 92, ../../sass/_base.scss */
+/* line 139, ../../sass/_base.scss */
 h4 {
   font-size: 24px;
   line-height: 130%;
@@ -157,7 +212,7 @@ h4 {
   margin-bottom: .3em;
 }
 
-/* line 101, ../../sass/_base.scss */
+/* line 148, ../../sass/_base.scss */
 h5 {
   font-size: 22px;
   line-height: 120%;
@@ -165,7 +220,7 @@ h5 {
   margin-bottom: .3em;
 }
 
-/* line 110, ../../sass/_base.scss */
+/* line 157, ../../sass/_base.scss */
 h6 {
   font-size: 20px;
   line-height: 120%;
@@ -173,19 +228,19 @@ h6 {
   color: #a62319;
 }
 
-/* line 119, ../../sass/_base.scss */
+/* line 166, ../../sass/_base.scss */
 p {
   font-size: 15px;
   line-height: 150%;
   color: #121212;
   margin-bottom: .3em;
 }
-/* line 125, ../../sass/_base.scss */
+/* line 172, ../../sass/_base.scss */
 p:focus {
   outline: none;
 }
 
-/* line 132, ../../sass/_base.scss */
+/* line 179, ../../sass/_base.scss */
 a, body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip a:hover {
   text-decoration: none;
   cursor: pointer;
@@ -196,27 +251,27 @@ a, body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #t
   animation: "slide-down 5s 3";
   color: #6a7613;
 }
-/* line 139, ../../sass/_base.scss */
+/* line 186, ../../sass/_base.scss */
 a:focus, body #mainWrapper #wrapper #top #skip a:focus:active, body #mainWrapper #wrapper #top #skip a:focus:visited, body #mainWrapper #wrapper #top #skip a:focus:hover {
   outline: none;
 }
-/* line 142, ../../sass/_base.scss */
+/* line 189, ../../sass/_base.scss */
 a:active, body #mainWrapper #wrapper #top #skip a:active {
   outline: none;
 }
-/* line 145, ../../sass/_base.scss */
+/* line 192, ../../sass/_base.scss */
 a:hover, body #mainWrapper #wrapper #top #skip a:hover {
   color: #5e6910;
   outline: none;
 }
 
-/* line 152, ../../sass/_base.scss */
+/* line 199, ../../sass/_base.scss */
 img {
   width: 100%;
   height: auto;
   display: block;
 }
-/* line 156, ../../sass/_base.scss */
+/* line 203, ../../sass/_base.scss */
 img:focus {
   outline: none;
 }
@@ -338,28 +393,17 @@ Media Queries
 ------------------------------------------------    */
 /* line 4, ../../sass/_mainlayout.scss */
 body {
-  height: 100%;
   font-family: "Merriweather", serif, arial;
   font-size: 14px;
   line-height: 150%;
   margin: 0;
 }
-/* line 12, ../../sass/_mainlayout.scss */
-body #mainWrapper {
-  overflow: hidden;
-}
-/* line 15, ../../sass/_mainlayout.scss */
-body #mainWrapper #wrapper {
-  box-shadow: inset 0px 5px 7px 0px rgba(127, 18, 10, 0.55);
-  padding-bottom: 350px;
-  overflow: hidden;
-}
-/* line 19, ../../sass/_mainlayout.scss */
+/* line 17, ../../sass/_mainlayout.scss */
 body #mainWrapper #wrapper #top {
   background-color: #4f95df;
   color: #4f95df;
 }
-/* line 23, ../../sass/_mainlayout.scss */
+/* line 21, ../../sass/_mainlayout.scss */
 body #mainWrapper #wrapper #top #skip a, body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip a:hover {
   position: absolute;
   left: 0;
@@ -373,7 +417,7 @@ body #mainWrapper #wrapper #top #skip a, body #mainWrapper #wrapper #top #skip a
 ------------------------------------     */
 /* line 4, ../../sass/_navlayout.scss */
 #brandbanner {
-  background-color: #8c251d;
+  background-color: #2d0237;
   height: 3px;
   width: 100%;
   top: 0;
@@ -385,42 +429,48 @@ body #mainWrapper #wrapper #top #skip a, body #mainWrapper #wrapper #top #skip a
 /* line 15, ../../sass/_navlayout.scss */
 header#header {
   padding: 1em 0;
-  background: #f7f7f7;
+  background: #fcfef1;
 }
 /* line 20, ../../sass/_navlayout.scss */
 header#header #logo a, header#header #logo body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip header#header #logo a:active, header#header #logo body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip header#header #logo a:visited, header#header #logo body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip header#header #logo a:hover {
   display: block;
 }
 /* line 23, ../../sass/_navlayout.scss */
-header#header #logo img {
-  max-width: 230px;
+header#header #logo a img#beetoplog, header#header #logo body #mainWrapper #wrapper #top #skip a:active img#beetoplog, body #mainWrapper #wrapper #top #skip header#header #logo a:active img#beetoplog, header#header #logo body #mainWrapper #wrapper #top #skip a:visited img#beetoplog, body #mainWrapper #wrapper #top #skip header#header #logo a:visited img#beetoplog, header#header #logo body #mainWrapper #wrapper #top #skip a:hover img#beetoplog, body #mainWrapper #wrapper #top #skip header#header #logo a:hover img#beetoplog {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  opacity: .9;
+  border: 1px solid purple;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px 0px rgba(31, 3, 37, 0.9);
 }
-/* line 28, ../../sass/_navlayout.scss */
+/* line 39, ../../sass/_navlayout.scss */
 header#header #brandz h1 {
   margin-bottom: .3em;
   text-align: center;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 28, ../../sass/_navlayout.scss */
+  /* line 39, ../../sass/_navlayout.scss */
   header#header #brandz h1 {
     font-size: 34px;
     line-height: 110%;
   }
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 28, ../../sass/_navlayout.scss */
+  /* line 39, ../../sass/_navlayout.scss */
   header#header #brandz h1 {
     font-size: 30px;
     line-height: 110%;
   }
 }
-/* line 40, ../../sass/_navlayout.scss */
+/* line 51, ../../sass/_navlayout.scss */
 header#header #brandz h3 {
   text-align: center;
   margin: 0;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 40, ../../sass/_navlayout.scss */
+  /* line 51, ../../sass/_navlayout.scss */
   header#header #brandz h3 {
     font-size: 26px;
     line-height: 110%;
@@ -428,7 +478,7 @@ header#header #brandz h3 {
   }
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 40, ../../sass/_navlayout.scss */
+  /* line 51, ../../sass/_navlayout.scss */
   header#header #brandz h3 {
     font-size: 26px;
     line-height: 110%;
@@ -436,34 +486,33 @@ header#header #brandz h3 {
   }
 }
 
-/* line 56, ../../sass/_navlayout.scss */
+/* line 67, ../../sass/_navlayout.scss */
 #mainmenu {
-  min-height: 60px;
-  /* 72px;*/
-  background: #a62319;
-  border-bottom: 2px solid #841b13;
-  box-shadow: 0px 0px 1px 1px rgba(179, 43, 32, 0.4);
+  min-height: 56px;
+  background: #4d115a;
+  box-shadow: 0px 0px 1px 0px rgba(77, 17, 90, 0.35);
 }
-/* line 65, ../../sass/_navlayout.scss */
+/* line 75, ../../sass/_navlayout.scss */
 #mainmenu .navbar {
   margin-bottom: 0;
-  min-height: 58px;
+  min-height: 56px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 65, ../../sass/_navlayout.scss */
+  /* line 75, ../../sass/_navlayout.scss */
   #mainmenu .navbar {
     min-height: 52px;
   }
 }
-/* line 72, ../../sass/_navlayout.scss */
+/* line 82, ../../sass/_navlayout.scss */
 #mainmenu .navbar-default,
 #mainmenu .navbar-collapse,
 #mainmenu .navbar-default .navbar-form {
   border-color: #eaeaea;
   border-color: transparent;
-  background-color: #a62319;
+  border: none;
+  background-color: #4d115a;
 }
-/* line 80, ../../sass/_navlayout.scss */
+/* line 91, ../../sass/_navlayout.scss */
 #mainmenu .navbar-default .navbar-nav > li a, #mainmenu .navbar-default .navbar-nav > li body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-nav > li a:active, #mainmenu .navbar-default .navbar-nav > li body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-nav > li a:visited, #mainmenu .navbar-default .navbar-nav > li body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-nav > li a:hover,
 #mainmenu .navbar-collapse .navbar-nav > li a,
 #mainmenu .navbar-collapse .navbar-nav > li body #mainWrapper #wrapper #top #skip a:active,
@@ -479,14 +528,13 @@ body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-form .na
 body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-form .navbar-nav > li a:visited,
 #mainmenu .navbar-default .navbar-form .navbar-nav > li body #mainWrapper #wrapper #top #skip a:hover,
 body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-form .navbar-nav > li a:hover {
-  color: #f7f7f7;
+  color: #dedede;
   letter-spacing: .15px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 168%;
-  font-weight: lighter;
-  text-shadow: 0 0 5px rgba(109, 37, 37, 0.5);
+  font-weight: normal;
 }
-/* line 89, ../../sass/_navlayout.scss */
+/* line 100, ../../sass/_navlayout.scss */
 #mainmenu .navbar-default .navbar-nav > li a:hover, #mainmenu .navbar-default .navbar-nav > li body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-nav > li a:hover,
 #mainmenu .navbar-collapse .navbar-nav > li a:hover,
 #mainmenu .navbar-collapse .navbar-nav > li body #mainWrapper #wrapper #top #skip a:hover,
@@ -494,11 +542,11 @@ body #mainWrapper #wrapper #top #skip #mainmenu .navbar-collapse .navbar-nav > l
 #mainmenu .navbar-default .navbar-form .navbar-nav > li a:hover,
 #mainmenu .navbar-default .navbar-form .navbar-nav > li body #mainWrapper #wrapper #top #skip a:hover,
 body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-form .navbar-nav > li a:hover {
-  color: #050505;
+  color: #f7f7f7;
   text-decoration: underline;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 80, ../../sass/_navlayout.scss */
+  /* line 91, ../../sass/_navlayout.scss */
   #mainmenu .navbar-default .navbar-nav > li a, #mainmenu .navbar-default .navbar-nav > li body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-nav > li a:active, #mainmenu .navbar-default .navbar-nav > li body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-nav > li a:visited, #mainmenu .navbar-default .navbar-nav > li body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-nav > li a:hover,
   #mainmenu .navbar-collapse .navbar-nav > li a,
   #mainmenu .navbar-collapse .navbar-nav > li body #mainWrapper #wrapper #top #skip a:active,
@@ -518,96 +566,100 @@ body #mainWrapper #wrapper #top #skip #mainmenu .navbar-default .navbar-form .na
     letter-spacing: 0;
   }
 }
-/* line 104, ../../sass/_navlayout.scss */
+/* line 113, ../../sass/_navlayout.scss */
+#mainmenu #primary-nav ul {
+  border-top: 1px solid #050006;
+}
+/* line 116, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-home a i.material-icons, #mainmenu #primary-nav ul #nav-home body #mainWrapper #wrapper #top #skip a:active i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-home a:active i.material-icons, #mainmenu #primary-nav ul #nav-home body #mainWrapper #wrapper #top #skip a:visited i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-home a:visited i.material-icons, #mainmenu #primary-nav ul #nav-home body #mainWrapper #wrapper #top #skip a:hover i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-home a:hover i.material-icons {
   font-size: 14px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 103, ../../sass/_navlayout.scss */
+  /* line 115, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-home a, #mainmenu #primary-nav ul #nav-home body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-home a:active, #mainmenu #primary-nav ul #nav-home body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-home a:visited, #mainmenu #primary-nav ul #nav-home body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-home a:hover {
     font-size: 14px;
     line-height: 150%;
   }
 }
-/* line 114, ../../sass/_navlayout.scss */
+/* line 126, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-one a i.material-icons, #mainmenu #primary-nav ul #nav-one body #mainWrapper #wrapper #top #skip a:active i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-one a:active i.material-icons, #mainmenu #primary-nav ul #nav-one body #mainWrapper #wrapper #top #skip a:visited i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-one a:visited i.material-icons, #mainmenu #primary-nav ul #nav-one body #mainWrapper #wrapper #top #skip a:hover i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-one a:hover i.material-icons {
   font-size: 13px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 113, ../../sass/_navlayout.scss */
+  /* line 125, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-one a, #mainmenu #primary-nav ul #nav-one body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-one a:active, #mainmenu #primary-nav ul #nav-one body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-one a:visited, #mainmenu #primary-nav ul #nav-one body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-one a:hover {
     font-size: 14px;
     line-height: 150%;
   }
 }
-/* line 124, ../../sass/_navlayout.scss */
+/* line 136, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-two a i.material-icons, #mainmenu #primary-nav ul #nav-two body #mainWrapper #wrapper #top #skip a:active i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-two a:active i.material-icons, #mainmenu #primary-nav ul #nav-two body #mainWrapper #wrapper #top #skip a:visited i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-two a:visited i.material-icons, #mainmenu #primary-nav ul #nav-two body #mainWrapper #wrapper #top #skip a:hover i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-two a:hover i.material-icons {
   font-size: 13px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 123, ../../sass/_navlayout.scss */
+  /* line 135, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-two a, #mainmenu #primary-nav ul #nav-two body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-two a:active, #mainmenu #primary-nav ul #nav-two body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-two a:visited, #mainmenu #primary-nav ul #nav-two body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-two a:hover {
     font-size: 14px;
     line-height: 150%;
   }
 }
-/* line 134, ../../sass/_navlayout.scss */
+/* line 146, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-three a i.material-icons, #mainmenu #primary-nav ul #nav-three body #mainWrapper #wrapper #top #skip a:active i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-three a:active i.material-icons, #mainmenu #primary-nav ul #nav-three body #mainWrapper #wrapper #top #skip a:visited i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-three a:visited i.material-icons, #mainmenu #primary-nav ul #nav-three body #mainWrapper #wrapper #top #skip a:hover i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-three a:hover i.material-icons {
   font-size: 13px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 133, ../../sass/_navlayout.scss */
+  /* line 145, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-three a, #mainmenu #primary-nav ul #nav-three body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-three a:active, #mainmenu #primary-nav ul #nav-three body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-three a:visited, #mainmenu #primary-nav ul #nav-three body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-three a:hover {
     font-size: 14px;
     line-height: 150%;
   }
 }
-/* line 144, ../../sass/_navlayout.scss */
+/* line 156, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-four a i.material-icons, #mainmenu #primary-nav ul #nav-four body #mainWrapper #wrapper #top #skip a:active i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-four a:active i.material-icons, #mainmenu #primary-nav ul #nav-four body #mainWrapper #wrapper #top #skip a:visited i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-four a:visited i.material-icons, #mainmenu #primary-nav ul #nav-four body #mainWrapper #wrapper #top #skip a:hover i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-four a:hover i.material-icons {
   font-size: 13px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 143, ../../sass/_navlayout.scss */
+  /* line 155, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-four a, #mainmenu #primary-nav ul #nav-four body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-four a:active, #mainmenu #primary-nav ul #nav-four body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-four a:visited, #mainmenu #primary-nav ul #nav-four body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-four a:hover {
     font-size: 14px;
     line-height: 150%;
   }
 }
-/* line 154, ../../sass/_navlayout.scss */
+/* line 166, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-five a i.material-icons, #mainmenu #primary-nav ul #nav-five body #mainWrapper #wrapper #top #skip a:active i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-five a:active i.material-icons, #mainmenu #primary-nav ul #nav-five body #mainWrapper #wrapper #top #skip a:visited i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-five a:visited i.material-icons, #mainmenu #primary-nav ul #nav-five body #mainWrapper #wrapper #top #skip a:hover i.material-icons, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-five a:hover i.material-icons {
   font-size: 13px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 153, ../../sass/_navlayout.scss */
+  /* line 165, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-five a, #mainmenu #primary-nav ul #nav-five body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-five a:active, #mainmenu #primary-nav ul #nav-five body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-five a:visited, #mainmenu #primary-nav ul #nav-five body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-five a:hover {
     font-size: 14px;
     line-height: 150%;
   }
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 165, ../../sass/_navlayout.scss */
+  /* line 177, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-six a.dropdown-toggle, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:active, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:visited, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:hover {
     font-size: 14px;
     line-height: 150%;
   }
-  /* line 166, ../../sass/_navlayout.scss */
+  /* line 178, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:focus, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:focus:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:focus:active, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:focus:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:focus:visited, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:focus:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:focus:hover {
     background-color: #b3261b;
   }
-  /* line 169, ../../sass/_navlayout.scss */
+  /* line 181, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:active, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:active {
     background-color: #b3261b;
   }
-  /* line 172, ../../sass/_navlayout.scss */
+  /* line 184, ../../sass/_navlayout.scss */
   #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:visited, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:visited {
     background-color: #b3261b;
   }
 }
-/* line 180, ../../sass/_navlayout.scss */
+/* line 192, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six a b.caret, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a:active b.caret, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a:active b.caret, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a:visited b.caret, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a:visited b.caret, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a:hover b.caret, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a:hover b.caret {
   margin-left: 5px;
 }
-/* line 184, ../../sass/_navlayout.scss */
+/* line 196, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:visited, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:visited,
 #mainmenu #primary-nav ul #nav-six a.dropdown-toggle,
 #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:active,
@@ -616,9 +668,12 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropd
 body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:visited,
 #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:hover,
 body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:hover {
-  background-color: #a62319;
+  background-color: #6f1686;
+  box-shadow: 1px 0px 1px 1px rgba(85, 8, 102, 0.55);
+  border-top: 1px solid purple;
+  border-bottom: 1px solid purple;
 }
-/* line 188, ../../sass/_navlayout.scss */
+/* line 203, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:focus:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus:active, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:focus:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus:visited, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:focus:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus:hover,
 #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a,
 #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:active,
@@ -629,17 +684,17 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:hover {
   background-color: #b3261b;
 }
-/* line 192, ../../sass/_navlayout.scss */
+/* line 207, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six .nav .open > a:focus, #mainmenu #primary-nav ul #nav-six .nav body #mainWrapper #wrapper #top #skip .open > a:focus:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .nav .open > a:focus:active, #mainmenu #primary-nav ul #nav-six .nav body #mainWrapper #wrapper #top #skip .open > a:focus:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .nav .open > a:focus:visited, #mainmenu #primary-nav ul #nav-six .nav body #mainWrapper #wrapper #top #skip .open > a:focus:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .nav .open > a:focus:hover {
   background-color: #b3261b;
 }
-/* line 195, ../../sass/_navlayout.scss */
+/* line 210, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six ul.dropdown-menu {
   min-width: 131px;
   top: 104%;
   background-color: #b3261b;
 }
-/* line 200, ../../sass/_navlayout.scss */
+/* line 215, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a, #mainmenu #primary-nav ul #nav-six ul.dropdown-menu body #mainWrapper #wrapper #top #skip li > a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a:active, #mainmenu #primary-nav ul #nav-six ul.dropdown-menu body #mainWrapper #wrapper #top #skip li > a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a:visited, #mainmenu #primary-nav ul #nav-six ul.dropdown-menu body #mainWrapper #wrapper #top #skip li > a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a:hover {
   font-size: 13px;
   font-weight: normal;
@@ -653,7 +708,7 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 @-moz-keyframes slide-down {}
 @-ms-keyframes slide-down {}
 @-o-keyframes slide-down {}
-/* line 211, ../../sass/_navlayout.scss */
+/* line 226, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > span i.material-icons {
   vertical-align: middle;
   margin-left: 3px;
@@ -664,7 +719,7 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 -------------------------------- */
 /* line 4, ../../sass/_maincontent.scss */
 #mainContent {
-  margin: 0 1.5em;
+  margin: 0em;
 }
 /* line 6, ../../sass/_maincontent.scss */
 #mainContent:focus {
@@ -732,26 +787,33 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 #mainContent #mainmiddle1 .apiarea, #mainContent #mainmiddle2 .apiarea {
   margin: 2em 0;
 }
-/* line 57, ../../sass/_maincontent.scss */
+/* line 58, ../../sass/_maincontent.scss */
 #mainContent #mainmiddle1 .apiarea .headline >, #mainContent #mainmiddle2 .apiarea .headline > {
   margin-bottom: .5em;
 }
-/* line 59, ../../sass/_maincontent.scss */
+/* line 60, ../../sass/_maincontent.scss */
 #mainContent #mainmiddle1 .apiarea .headline > i.material-icons, #mainContent #mainmiddle2 .apiarea .headline > i.material-icons {
   color: #a62319;
   font-size: 24px;
   line-height: 99%;
   vertical-align: middle;
 }
-/* line 69, ../../sass/_maincontent.scss */
+/* line 70, ../../sass/_maincontent.scss */
+#mainContent #mainmiddle2 {
+  padding-left: 3em;
+  background-color: rgba(251, 230, 255, 0.5);
+  border-top: 1px ridge rgba(39, 39, 39, 0.9);
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.35);
+}
+/* line 81, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea {
   margin-bottom: 2em;
 }
-/* line 71, ../../sass/_maincontent.scss */
+/* line 83, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea .headline {
   margin-bottom: .5em;
 }
-/* line 73, ../../sass/_maincontent.scss */
+/* line 85, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea .headline i.material-icons {
   color: #a62319;
   font-size: 24px;
@@ -764,9 +826,6 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 /* line 4, ../../sass/_footer.scss */
 .footer#mainFooter {
   padding: 0 !important;
-  margin-top: -250px;
-  min-height: 295px;
-  clear: both;
   box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2) inset;
   box-shadow: 5px 3px 5px 2px rgba(15, 16, 2, 0.7);
   border-top: 1px solid #929292;
@@ -778,43 +837,53 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 }
 /* line 15, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content {
-  padding-top: 2em;
+  margin: 3em 0;
 }
-/* line 16, ../../sass/_footer.scss */
+/* line 17, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content h5 {
   margin-bottom: .75em;
 }
 @media (max-width: 380px) {
-  /* line 16, ../../sass/_footer.scss */
+  /* line 17, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content h5 {
     font-size: 20px;
   }
-  /* line 20, ../../sass/_footer.scss */
+  /* line 21, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content h5 i.material-icons.md-dark {
     font-size: 18px;
   }
 }
-/* line 27, ../../sass/_footer.scss */
+/* line 28, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content #socialIcons p {
-  margin-bottom: .75em;
+  margin-bottom: 1.2em;
   font-size: 13px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 27, ../../sass/_footer.scss */
+  /* line 28, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content #socialIcons p {
     margin-bottom: 1em;
   }
 }
-/* line 34, ../../sass/_footer.scss */
+/* line 35, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content #socialIcons a {
+  -moz-transition: all 3s ease-in-out;
+  -webkit-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
   display: inline-block;
   margin-left: .5em;
-  max-height: auto;
-  max-width: 55px;
+  max-height: 57px;
+  max-width: 57px;
   font-size: 13px;
 }
+/* line 45, ../../sass/_footer.scss */
+.footer#mainFooter #topfoot.container #footer-content #socialIcons a:hover img {
+  transform: scale(1.1);
+  transform: scale(1.1);
+  transform: scale(1.1);
+}
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 34, ../../sass/_footer.scss */
+  /* line 35, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content #socialIcons a {
     max-width: 40px;
     margin-left: 0;
@@ -822,89 +891,96 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 34, ../../sass/_footer.scss */
+  /* line 35, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content #socialIcons a {
     max-width: 40px;
     margin-left: 0;
   }
 }
 @media (max-width: 380px) {
-  /* line 34, ../../sass/_footer.scss */
+  /* line 35, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content #socialIcons a {
     max-width: 40px;
   }
 }
+/* line 69, ../../sass/_footer.scss */
+.footer#mainFooter #topfoot.container #footer-content #relatedLinks a {
+  color: #4d115a;
+}
 @media (max-width: 380px) {
-  /* line 56, ../../sass/_footer.scss */
+  /* line 73, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content #relatedLinks h5 {
     font-size: 20px;
   }
-  /* line 58, ../../sass/_footer.scss */
+  /* line 75, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content #relatedLinks h5 i.material-icons.md-dark {
     font-size: 18px;
   }
 }
+/* line 80, ../../sass/_footer.scss */
+.footer#mainFooter #topfoot.container #footer-content #relatedLinks ul.related {
+  padding: 3px 0;
+}
 @media (max-width: 380px) {
-  /* line 65, ../../sass/_footer.scss */
+  /* line 83, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content #relatedLinks ul.related span {
     display: none;
   }
 }
-/* line 70, ../../sass/_footer.scss */
+/* line 88, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content #relatedLinks ul.related li a {
-  color: #a62319;
+  color: #4d115a;
   text-decoration: underline;
   font-size: 13px;
   vertical-align: text-bottom;
 }
-/* line 77, ../../sass/_footer.scss */
+/* line 95, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content #relatedLinks ul.related li i.material-icons {
   vertical-align: text-top;
   font-size: 13px;
 }
-/* line 93, ../../sass/_footer.scss */
-.footer#mainFooter #topfoot.container #footer-content .subfoot {
-  margin-bottom: 3em;
-}
-/* line 95, ../../sass/_footer.scss */
+/* line 113, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content .subfoot p {
   color: #121212;
   font-size: 13px;
 }
-/* line 100, ../../sass/_footer.scss */
+/* line 118, ../../sass/_footer.scss */
 .footer#mainFooter #topfoot.container #footer-content .subfoot h5 .material-icons.md-dark {
-  color: #a62319;
+  color: #4d115a;
   font-size: 22px;
   line-height: 98%;
   vertical-align: middle;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 100, ../../sass/_footer.scss */
+  /* line 118, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content .subfoot h5 .material-icons.md-dark {
     font-size: 19px;
   }
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 100, ../../sass/_footer.scss */
+  /* line 118, ../../sass/_footer.scss */
   .footer#mainFooter #topfoot.container #footer-content .subfoot h5 .material-icons.md-dark {
     font-size: 18px;
   }
 }
-/* line 116, ../../sass/_footer.scss */
+/* line 134, ../../sass/_footer.scss */
 .footer#mainFooter #botfoot {
-  box-shadow: -2px 1px 5px 0px #4d0702;
-  border-top: 1px solid #871c14;
-  background-color: #a62319;
-  border-top: 1px solid #871c14;
-  background-color: #a62319;
-  box-shadow: -2px 1px 5px 0px #4d0702;
+  max-height: 74.25px;
   border-top: 1px solid #871c14;
   background-color: #a62319;
   border-top: 1px solid #180403;
   background-color: #4d115a;
 }
+/* line 143, ../../sass/_footer.scss */
+.footer#mainFooter #botfoot .container .row #bottomlogo {
+  padding: 10px;
+}
+/* line 145, ../../sass/_footer.scss */
+.footer#mainFooter #botfoot .container .row #bottomlogo img {
+  max-width: 50px;
+}
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 131, ../../sass/_footer.scss */
+  /* line 149, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row #bottomlogo img {
     max-width: 60px !important;
     display: inline-block;
@@ -912,22 +988,30 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
   }
 }
 @media (max-width: 380px) {
-  /* line 131, ../../sass/_footer.scss */
-  .footer#mainFooter #botfoot .container .row #bottomlogo img {
+  /* line 143, ../../sass/_footer.scss */
+  .footer#mainFooter #botfoot .container .row #bottomlogo {
     padding-top: .3em;
   }
 }
-/* line 142, ../../sass/_footer.scss */
+/* line 159, ../../sass/_footer.scss */
 .footer#mainFooter #botfoot .container .row .copyright {
   text-align: right;
   vertical-align: middle;
-  line-height: 82px;
+  line-height: 73.25px;
+  height: 73.25px;
   margin-bottom: 0;
   font-size: 13px;
-  color: white;
+  color: #5f156f;
+}
+/* line 167, ../../sass/_footer.scss */
+.footer#mainFooter #botfoot .container .row .copyright .fcee {
+  vertical-align: text-top;
+  line-height: 26px;
+  font-size: 22px;
+  color: #787878;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 142, ../../sass/_footer.scss */
+  /* line 159, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright {
     line-height: 18px;
     font-size: 12px;
@@ -937,22 +1021,22 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
   }
 }
 @media (max-width: 380px) {
-  /* line 142, ../../sass/_footer.scss */
+  /* line 159, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright {
     padding-top: 10px !important;
     line-height: 18px;
     font-size: 12px;
   }
 }
-/* line 161, ../../sass/_footer.scss */
+/* line 186, ../../sass/_footer.scss */
 .footer#mainFooter #botfoot .container .row .copyright .myself {
-  color: #b2b2b2;
+  color: #9b9b9b;
   vertical-align: text-top;
-  line-height: 20px;
+  line-height: 22px;
   font-size: 13px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 161, ../../sass/_footer.scss */
+  /* line 186, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright .myself {
     font-size: 12px;
     line-height: 18px;
@@ -960,58 +1044,69 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
   }
 }
 @media (max-width: 380px) {
-  /* line 161, ../../sass/_footer.scss */
+  /* line 186, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright .myself {
     float: right;
   }
 }
-/* line 175, ../../sass/_footer.scss */
+/* line 201, ../../sass/_footer.scss */
 .footer#mainFooter #botfoot .container .row .copyright span.braggSection {
   vertical-align: text-top;
   line-height: 20px;
   margin-right: 2.5em;
 }
+/* line 205, ../../sass/_footer.scss */
+.footer#mainFooter #botfoot .container .row .copyright span.braggSection .city {
+  color: #5e5e5e;
+}
+/* line 208, ../../sass/_footer.scss */
+.footer#mainFooter #botfoot .container .row .copyright span.braggSection .year {
+  color: #787878;
+}
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 175, ../../sass/_footer.scss */
+  /* line 201, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright span.braggSection {
     margin-right: 1em;
     line-height: 18px;
   }
-  /* line 182, ../../sass/_footer.scss */
+  /* line 214, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright span.braggSection .city {
     float: right;
+    font-weight: bold;
   }
-  /* line 185, ../../sass/_footer.scss */
+  /* line 218, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright span.braggSection .year {
     float: right;
+    font-weight: bold;
+    color: #c4c4c4;
   }
 }
 @media (max-width: 380px) {
-  /* line 191, ../../sass/_footer.scss */
+  /* line 226, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright span.braggSection .city {
-    color: white;
+    color: #eaeaea;
     float: right;
   }
-  /* line 195, ../../sass/_footer.scss */
+  /* line 230, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright span.braggSection .year {
     float: right;
-    color: #c5d937;
+    color: #eaeaea;
   }
 }
-/* line 201, ../../sass/_footer.scss */
+/* line 236, ../../sass/_footer.scss */
 .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:active, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:active, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:visited, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:visited, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:hover, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:hover {
   color: #f7f7f7;
   font-size: 12px;
 }
 @media (min-width: 380px) and (max-width: 767px) {
-  /* line 201, ../../sass/_footer.scss */
+  /* line 236, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:active, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:active, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:visited, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:visited, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:hover, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:hover {
     font-size: 12px;
     line-height: 12px;
   }
 }
 @media (max-width: 380px) {
-  /* line 201, ../../sass/_footer.scss */
+  /* line 236, ../../sass/_footer.scss */
   .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:active, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:active, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:visited, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:visited, .footer#mainFooter #botfoot .container .row .copyright span.braggSection body #mainWrapper #wrapper #top #skip a.sl:hover, body #mainWrapper #wrapper #top #skip .footer#mainFooter #botfoot .container .row .copyright span.braggSection a.sl:hover {
     margin-left: .3em;
   }
@@ -1033,25 +1128,31 @@ side navigation
     font-size: 18px;
   }
 }
-/* line 16, ../../sass/_sidenav.scss */
-#mainContent {
-  min-height: 450px;
-}
 /* line 18, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 {
   padding: 0;
 }
 /* line 20, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 section.apiarea {
+  position: relative;
+  background-color: #4d115a;
   margin: 0;
-  min-height: 450px;
-  border: 1px solid purple;
+  min-height: 350px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid black;
+  /*440144*/
 }
-/* line 21, ../../sass/_sidenav.scss */
+/* line 22, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 section.apiarea img {
-  max-width: 100%;
+  max-width: 27%;
+  margin-left: 15px;
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 10px;
 }
-/* line 28, ../../sass/_sidenav.scss */
+/* line 39, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL {
   height: 100%;
   width: 0;
@@ -1064,7 +1165,7 @@ side navigation
   transition: all 0.5s;
   padding-top: 60px;
 }
-/* line 29, ../../sass/_sidenav.scss */
+/* line 40, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL .closebtn {
   position: absolute;
   top: 10px;
@@ -1072,38 +1173,39 @@ side navigation
   font-size: 36px;
   margin-left: 50px;
 }
-/* line 46, ../../sass/_sidenav.scss */
+/* line 57, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL a, #mainContent #mainmiddle1 .sidenavL body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL a:active, #mainContent #mainmiddle1 .sidenavL body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL a:visited, #mainContent #mainmiddle1 .sidenavL body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL a:hover {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 21px;
+  font-size: 16px;
   color: #fbfbfb;
   display: block;
   transition: 0.3s;
 }
-/* line 55, ../../sass/_sidenav.scss */
+/* line 66, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL:hover, #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus, #mainContent #mainmiddle1 .sidenavL .offcanvas body #mainWrapper #wrapper #top #skip a:focus:active, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus:active, #mainContent #mainmiddle1 .sidenavL .offcanvas body #mainWrapper #wrapper #top #skip a:focus:visited, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus:visited, #mainContent #mainmiddle1 .sidenavL .offcanvas body #mainWrapper #wrapper #top #skip a:focus:hover, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus:hover {
   color: #f1f1f1;
 }
-/* line 60, ../../sass/_sidenav.scss */
+/* line 71, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL {
+  display: inline-block;
   padding: 16px;
 }
-/* line 61, ../../sass/_sidenav.scss */
+/* line 74, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL .panopen {
   position: absolute;
   left: -9999px;
   opacity: 0;
   transition: all 1s;
 }
-/* line 70, ../../sass/_sidenav.scss */
+/* line 83, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL .panclose {
   position: absolute;
   left: 0;
   opacity: 1;
   transition: all 3s;
 }
-/* line 78, ../../sass/_sidenav.scss */
+/* line 91, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL a#sesame, #mainContent #mainmiddle1 #mainL body #mainWrapper #wrapper #top #skip a#sesame:active, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 #mainL a#sesame:active, #mainContent #mainmiddle1 #mainL body #mainWrapper #wrapper #top #skip a#sesame:visited, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 #mainL a#sesame:visited, #mainContent #mainmiddle1 #mainL body #mainWrapper #wrapper #top #skip a#sesame:hover, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 #mainL a#sesame:hover {
   background: url("../assets/images/burger.png") no-repeat;
   width: 29px;
@@ -1113,12 +1215,12 @@ side navigation
   line-height: 26px;
   margin-left: 13.5em;
 }
-/* line 90, ../../sass/_sidenav.scss */
+/* line 103, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL h2 {
   font-size: 26px;
   line-height: 32px;
 }
-/* line 94, ../../sass/_sidenav.scss */
+/* line 107, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL p {
   padding: 15px 0;
   font-size: 16px;
