@@ -20,5 +20,5 @@
   
   <br />
   
-  <kbd>bottom-bees-pg</kbd>
+  <kbd>bottom-bees-pg</kbd> sticky footer
   ![bees page](bottombee.png?raw=true "mobile" target="_blank")
