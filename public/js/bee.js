@@ -1,138 +1,260 @@
 (function() {
 
 	//globals
-	var beesArr = [];
-	//bees count
-	var bcount = beesArr.length;
-	//qb count
-	//var qbcount = queenCount();
-	//wkcount
-	//var wkcount = workerCount();
-	//drcount
-	//var drcount = droneCount();
 
-	//3 types of bees
-	var qBee = {};
-	var wBee = {};
-	var dBee = {};
+	//canvas
+	var canvas = null;
+	var context = null;
+
+	//offscreen canvas
+	var bufferCanvas = null;
+	var bufferCanvasCtx = null;
+
+
+
+	var beesArr = [];
+
+	//timer
+	var beeCannon = null;
+
+	//sub arrays
+	var qArr = [];	//queen bees arr
+	var wArr = [];	//worker bees arr
+	var dArr = [];	//drone bees arr
+
+	//initiliaze counters
+	var bcount = (qArr.length + wArr.length + dArr.length);		//all bees array
+	var qcount = 0;		//queen bees array
+	var wcount = 0;		//worker bees array
+	var dcount = 0;		//drone bees array
+	var count = 0;		//counting adds	
+	
+
+	//max settings
+	var mxqb = 3;		//max queen bees
+	var mxwb = 5;		//max worker bees
+	var mxdb = 7;		//max drone bees
+	var mxbees = (mxqb + mxwb + mxdb); 	//max bees num
+
+
+/*****
+Bee function
+******/	
 
 	//bee const
 	function Bee(type) {
 
-		//if bcount less than or equals 15
-		if (bcount < 15) {
-			//add to count each time new bee is created
-			bcount++;
-			console.log('bee count: ' + bcount);
-
-			if ((type).toString() === 'qBee') {
+		// if bcount less than or equals 15
+		// ================================
+		if (bcount < mxbees) {
+			
+			// queen bees
+			// ==========
+//debugger;
+			if (type === 'qBee' &&  (qcount < mxqb) ) {
+				//all bees counter
+				bcount++;
 				this.type = 'qBee';
 				this.health = 100;
-				console.log(this.type);
-				console.log(this.health);
+
+				// add a unique id  | 2 two parts: 
+				// =========================
+				// charAt(0)=> type name  
+				// number from 1 to their max
+
+				var qid = function(id) {
+					qcount++;
+					this.id  = qcount;
+					return this.id;	
+				};
+
+				//adding first character from their type to the id
+				this.id = this.type.charAt(0).concat(qid(this.id).toString());
+
 				return;
 
 			}//if qBee
 
-			if ((type).toString() === 'wBee') {
+			//worker bees
+			//==========
+			if (type === 'wBee' &&  (wcount < mxwb)    ) {
+				//add new bee
+				bcount++;
+				
 				this.type = 'wBee';
 				this.health = 75;
-				console.log(this.type);
-				console.log(this.health);
+
+				//adding id number
+				var wid = function(id) {
+					wcount++;
+					this.id  = wcount;
+					return this.id;	
+				};
+
+				//adding id letter
+				this.id = this.type.charAt(0).concat(wid(this.id).toString());
+
 				return;
 			
 			}//if wBee
 
-			if ((type).toString() === 'dBee') {
+			//drone bees
+			//==========
+			if (type === 'dBee'  &&  (dcount < mxdb)   ) {
+				//add new bee
+				bcount++;
+				
 				this.type = 'dBee';
 				this.health = 50;
-				console.log(this.type);
-				console.log(this.health);
+
+				//adding id number
+				var did = function(id) {
+					dcount++;
+					this.id  = dcount;
+					return this.id;	
+				};
+
+				//adding id letter
+				this.id = this.type.charAt(0).concat(did(this.id).toString());
+				
+
+				//console.log(this.type);
+				//console.log(this.health);
+				//console.log(this.id);
 				return;
 			
 			}//if dBee
 
+
 			else {
-				console.log('not a valid bee type!');
+
+				//reached these type of bees max amount
+				console.log('maxed out!');
 				return true;
 			}
 
-		}//if bCount less than 15
+		}
+		//if bCount less than 15
+		//======================
+			
 		
-		//reached max bees amount
+
+		//reached max bees amount for all types
+		//=====================================		
 		else {
 
-			console.log('sorry, max bees amount has been reached!');
-			return true;
-
+				clearInterval(beeCannon);
+				
 		}//bcount greater than 15	
 
+	//console.log('sorry no vacany - max bees amount has been reached!');
 
-
-
-
-
-
-
-
-
-		
-	
 	}//bee const
 
-	//create new bees
 
-	var bee1 = new Bee('qBee');
-	console.log(bee1);
 
-	var bee2 = new Bee('wBee');
-	console.log(bee2);
+/*****
+init function
+******/
+
+
+	function init() {
+
+		//console.log('enter init');
+
+		//handle dom
+		canvas = document.getElementById('beeCanvas');
+		//ref inst
+		context = canvas.getContext('2d');
+
+		//create new elem based on canvas
+		bufferCanvas = document.createElement("canvas");
+		//new elem inst
+		bufferCanvasCtx = bufferCanvas.getContext("2d");
+		
+		//buffers new width and height same as original canvas already in page
+		bufferCanvasCtx.canvas.width = context.canvas.width;
+		bufferCanvasCtx.canvas.height = context.canvas.height;
+
+		//set interval timer -> add/shoot bees randomly to page
+		beeCannon = setInterval(addBee,200);
+		//console.log('called addBee -init');
+
+		//draw blank page
+		//drawPage();
+
+
+
+	}//init
+
+
+
+
+
+
+
+/*****
+addBee function
+******/
+
+debugger;
+	function addBee() {
+		
+		function addToArr(obj) {
+
+					switch (this.type) {
+
+						case "qBee":
+						qArr.push(obj);
+						
+						break;
+
+						case "wBee":
+						wArr.push(obj);
+						
+						break;
+						
+						case "dBee":
+						dArr.push(obj);
+						
+
+					}//switch
+
+			
+		}//addToArr funct
+
+	//call all bees on timer
+	//======================
+
+
+		//all bees array |mxbees=15
+		for (var i=0; i < mxbees; i++) {
+
+			//queen bees |mxqb=3
+			for(var ii=0; ii < mxqb; ii++) {
+				addToArr(new Bee('qBee'));
+			}
+			//worker bees |mxqb=5
+			for(var iii=0; iii < mxwb; iii++) {
+				addToArr(new Bee('wBee'));
+			}
+			//drone bees |mxdb=7
+			for(var iiii=0; iiii < mxdb; iiii++) {
+				addToArr(new Bee('dBee'));
+			}
+
+			//console.log('called bees');
+		}//outer for loop
 	
-	var bee3 = new Bee('dBee');
-	console.log(bee3);
-
-	var bee4 = new Bee('qBee');
-	console.log(bee4);
-
-	var bee5 = new Bee('wBee');
-	console.log(bee5);
 	
-	var bee6 = new Bee('dBee');
-	console.log(bee6);
-
-	var bee7 = new Bee('qBee');
-	console.log(bee7);
-
-	var bee8 = new Bee('wBee');
-	console.log(bee8);
 	
-	var bee9 = new Bee('dBee');
-	console.log(bee9);
 
-	var bee10 = new Bee('qBee');
-	console.log(bee10);
+	//var bee1 = new Bee();
+	//bee1.type = 'qBee';
+	//console.log(bee1);
 
-	var bee11 = new Bee('wBee');
-	console.log(bee11);
-	
-	var bee12 = new Bee('dBee');
-	console.log(bee12);
+	}//addBee
 
-	var bee13 = new Bee('qBee');
-	console.log(bee13);
-
-	var bee14 = new Bee('wBee');
-	console.log(bee14);
-	
-	var bee15 = new Bee('dBee');
-	console.log(bee15);
-
-	// here count equals 15
-	// and i get => sorry, max bees amount has been reached!
-
-	var bee16 = new Bee('dBee');
-	console.log(bee16);
-	
 	
 
 
@@ -145,6 +267,35 @@
 
 
 
+
+/*
+-----------------------------------------
+Calling bees returns :
+
+Bee {type:"qBee", health:100, id:"q1"}    //first 1
+....
+......
+........
+Bee {type:"dBee", health:50, id:"d5"}     //last 15 
+-----------------------------------------
+*/
+
+
+/*
+	
+
+	
+	console.log('what is all bees count: ' + bcount);
+	console.log('qcounter: ' + qcount);
+	console.log('wcounter: ' + wcount);
+	console.log('dcounter: ' + dcount);
+
+*/
+
+
+	//fire up init//
+	document.addEventListener('DOMContentLoaded', init, false);
+	console.log('event working');
 
 
 })();//self exe funct

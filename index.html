@@ -6,15 +6,18 @@
     <title>stefanoL.</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1485650989346">
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1485734437560">
     <!-- google material icons   -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="public/builds/css/styles.css?rel=1485650989346">
+    <link rel="stylesheet" type="text/css" href="public/builds/css/styles.css?rel=1485734437567">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+   
+
+  
 </head>
 
 <body class="home">
@@ -64,6 +67,7 @@
                             <h3>what bees do when bees having fun</h3>
                         </div>
                         <!--  end of div brandz   -->
+
 
 
                     </div>
@@ -150,8 +154,10 @@
 
 
 
-        <div id="mainContent" role="main" tabindex="0">
-           <div class="container-fluid"> 
+     <div id="mainContent" role="main" tabindex="0">
+        <div class="container-fluid"> 
+
+
             <div class="row">
                <div class="col-md-2" id="mainmiddle1">
                         <!--  apiarea   -->
@@ -185,22 +191,99 @@
                         <!--  apiarea   -->
                         <section class="apiarea">
                             <h3 class="headline">
-                                <i class="material-icons">web_asset</i> COL-MD-8</h3>
-                            <p>COL-MD-OFFSET-1 COL-MD-8
-                            </p>
-                            <p>CONTAINER FLUID, STICKY FOOTER, HEADER AND FOOTER CONTAINER WRAPPED, TOP/PANCAKE NAVIGATION
-                            </p>
-                        </section>
-                        <!--  end of sec apiarea   -->
-                </div>
-                <!--  end of div mainmiddle2   -->
+                                <i class="material-icons">web_asset</i> Bees Rules</h3>
+                           
 
+
+           
+                    
+                    <table class="table"> 
+                        <caption>To change bees amts:
+                                 mxqb =>queenBees, mxwb =>workerBees, 
+                                 mxdb =>droneBees 
+                        </caption>
+                        <thead> 
+                            <tr style="height:15px;">
+                            </tr>
+                            <tr> 
+                                <th>#</th> 
+                                <th>Queen Bees</th> 
+                                <th>Worker Bees</th> 
+                                <th>Drone Bees</th> 
+                            </tr> 
+                        </thead> 
+                        <tbody> 
+                            <tr> 
+                                <th scope="row">1</th> 
+                                <td>100 health-init</td> 
+                                <td>75 health-init</td> 
+                                <td>50 health-init</td> 
+                            </tr> 
+                            <tr> 
+                                <th scope="row">2</th> 
+                                <td>gethit= health-7,death=zero health</td> 
+                                <td>gethit= health-12</td> 
+                                <td>gethit= health-18</td> 
+                            </tr> 
+                            <tr> 
+                                <th scope="row">3</th> 
+                                <td>queens=zero => all b-types dead</td> 
+                                <td></td> 
+                                <td></td> 
+                            </tr> 
+                            <tr> 
+                                <th scope="row">Actions</th> 
+                                <td>
+                                - getHit randomly picks a bee and hits it(minus health
+                                  etc)
+                                - out of health no longer can be pick -dead.
+                                - last queen dies all die
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <th scope="row">Display</th> 
+                                <td>
+                                - press hit displays bee details(health,dead etc)
+                                - reset all bees button
+                                </td> 
+                            </tr> 
+                        </tbody> 
+                    </table> 
+               
+
+                </section>
+                <!--  end of sec apiarea   -->
             </div>
-            <!--  End of row  -->    
-           </div>  <!--  end of div container-fluid   -->      
- 
-        </div>
-        <!--  end of div mainContent   -->
+            <!--  end of div mainmiddle2   -->
+            </div>
+            <!--  End of row  -->  
+       
+
+    <!-- ****************    canvas        *******************   -->      
+        
+          <div class="row">
+               <div class="col-md-12" id="outercanvas">
+                    <canvas id="beeCanvas" width="800" height="400">
+                        If you can see this +++  Canvas not supported  ++++
+                        then your browser does not support CanvasApi
+                        ++++ please update your browser  ++++
+                    </canvas>
+                      
+                </div>
+            
+          </div>
+           
+
+
+
+    <!-- ***************  end of canvas   ******************** -->         
+
+        </div>  <!--  end of div container-fluid   -->   
+
+           
+      
+    </div>
+    <!--  end of div mainContent   -->
         
 
 
@@ -295,11 +378,12 @@
     <!--  end of mainFooter   -->
     <!-- END footer -->
 
-    <script src="/bower_components/jquery/dist/jquery.js?rel=1485650989347"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js?rel=1485650989347"></script>
+    <script src="/bower_components/jquery/dist/jquery.js?rel=1485734437568"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js?rel=1485734437568"></script>
     <script src="bower_components/nanobar/nanobar.js"></script>
-    <script src="/public/builds/js/scripts.min.js?rel=1485650989347"></script>
-    <script src="/public/js/bee.js?rel=1485650989347"></script>
+    <script src="/public/builds/js/scripts.min.js?rel=1485734437568"></script>
+    <script src="/public/js/bee.js?rel=1485734437569"></script>
+
 
 
 </body>
