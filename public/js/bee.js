@@ -160,7 +160,7 @@ init function
 
 	function init() {
 
-		//console.log('enter init');
+		console.log('enter init');
 
 		//handle dom
 		canvas = document.getElementById('beeCanvas');
@@ -178,7 +178,7 @@ init function
 
 		//set interval timer -> add/shoot bees randomly to page
 		beeCannon = setInterval(addBee,200);
-		//console.log('called addBee -init');
+		console.log('called addBee -init');
 
 		//draw blank page
 		//drawPage();
@@ -199,32 +199,9 @@ addBee function
 
 debugger;
 	function addBee() {
-		
-		function addToArr(obj) {
 
-					switch (this.type) {
-
-						case "qBee":
-						qArr.push(obj);
-						
-						break;
-
-						case "wBee":
-						wArr.push(obj);
-						
-						break;
-						
-						case "dBee":
-						dArr.push(obj);
-						
-
-					}//switch
-
-			
-		}//addToArr funct
-
-	//call all bees on timer
-	//======================
+		//call all bees on timer
+	   //=======================
 
 
 		//all bees array |mxbees=15
@@ -243,11 +220,48 @@ debugger;
 				addToArr(new Bee('dBee'));
 			}
 
-			//console.log('called bees');
+			console.log('start calling bees');
 		}//outer for loop
 	
+
+
+
+	
+		function addToArr(type) {
+
+					switch (this.type) {
+
+						case "qBee":
+						qArr.push(type);
+						console.log('added qBee');
+						console.log(qArr);
+						
+						break;
+
+						case "wBee":
+						wArr.push(type);
+						console.log('added wBee');
+						console.log(qArr);
+						
+						break;
+						
+						case "dBee":
+						dArr.push(type);
+						console.log('added dBee');
+						console.log(qArr);
+						
+
+					}//switch
+
+			
+		}//addToArr funct
+
+
+
+
 	
 	
+
 
 	//var bee1 = new Bee();
 	//bee1.type = 'qBee';
