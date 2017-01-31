@@ -24,9 +24,9 @@ function Bee(name,type,health,beeTotal) {
 }
 
 
-function addbees(bee,type) {
+function addbees(type) {
   
-   bee = new Bee();
+   var bee = new Bee();
   
   allBees.beeTotal = counter++;
  
