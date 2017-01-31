@@ -11,7 +11,12 @@ var allBees = {
   bee3: {type: 'dBee', health:50 },
   
   //total added at time a new bee is added
-  "bee total": 0 
+  "bee total": 0,
+  
+  //or can use prototype
+  getHit: function() {
+    return health - 7;
+  }
  
   
 };
