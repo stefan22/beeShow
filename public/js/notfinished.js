@@ -21,6 +21,7 @@ var allBees = {
   
 };
 
+//constructor
 function Bee(name,type,health,beeTotal) {
   
   this.name = name | 'default';    //0
