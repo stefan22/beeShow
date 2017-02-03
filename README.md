@@ -30,5 +30,5 @@
   <br />
   
   <kbd>console</kbd> could it have done this earlier
-  ![bees page](console.png?raw=true "mobile" target="_blank")
+  ![bees page](console1.png?raw=true "mobile" target="_blank")
 
