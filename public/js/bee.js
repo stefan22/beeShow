@@ -240,7 +240,7 @@ window.console.log('event fired up');
 	Bee {
 		
 		type:'dBee',
-		health:100,
+		health:50,
 		id:1
 
 	}
@@ -250,55 +250,55 @@ window.console.log('event fired up');
 (pos)
 0.		{
 			type:'dBee',
-			health:100,
+			health:50,
 			id:1
 		},
 
 1.		{
 			type:'dBee',
-			health:100,
+			health:50,
 			id:2
 		},
 
 2.		{
 			type:'dBee',
-			health:100,
+			health:50,
 			id:3
 		},
 
 3.		{
 			type:'dBee',
-			health:100,
+			health:50,
 			id:4
 		},
 
 4.		{
 			type:'dBee',
-			health:100,
+			health:50,
 			id:5
 		},
 
 5.		{
 			type:'dBee',
-			health:100,
+			health:50,
 			id:6
 		},
 
 6.		{
 			type:'wBee',
-			health:100,
+			health:75,
 			id:7
 		},
 
 7.		{
 			type:'wBee',
-			health:100,
+			health:75,
 			id:8
 		},
 
 8.		{
 			type:'wBee',
-			health:100,
+			health:75,
 			id:9
 		},
 
