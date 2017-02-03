@@ -234,6 +234,93 @@ window.console.log('event fired up');
 
 
 
+/*
+===================== getting back at this time =======================
 
+	Bee {
+		
+		type:'dBee',
+		health:100,
+		id:1
+
+	}
+
+
+		beesArr = [
+(pos)
+0.		{
+			type:'dBee',
+			health:100,
+			id:1
+		},
+
+1.		{
+			type:'dBee',
+			health:100,
+			id:2
+		},
+
+2.		{
+			type:'dBee',
+			health:100,
+			id:3
+		},
+
+3.		{
+			type:'dBee',
+			health:100,
+			id:4
+		},
+
+4.		{
+			type:'dBee',
+			health:100,
+			id:5
+		},
+
+5.		{
+			type:'dBee',
+			health:100,
+			id:6
+		},
+
+6.		{
+			type:'wBee',
+			health:100,
+			id:7
+		},
+
+7.		{
+			type:'wBee',
+			health:100,
+			id:8
+		},
+
+8.		{
+			type:'wBee',
+			health:100,
+			id:9
+		},
+
+
+		...
+		.....
+		.........
+
+
+14.		{
+			type:'qBee',
+			health:100,
+			id:15
+		}
+
+
+	]
+
+	length:15
+	Array[0]
+
+=========================== end ==========================================
+*/
 
 
