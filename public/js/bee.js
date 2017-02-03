@@ -43,10 +43,21 @@ Bee function
 	
 		this.type = type || 'no type';
 
-		
+		// adding positioning
+		// -------------------
+		// x-axis left side at different positions
+		this.x = Math.random() * 3;
+		// y-axis start off from the middle of page 
+		this.y = context.canvas.height/2;
 
-		//added automatically by addBee funct
-		//this.id = id || null;
+		//fly-off
+		this.fly = (Math.random() * 5) +7;
+
+		//for now all bees same size
+		this.width = 25;
+		this.height = 40;
+
+		
 
 
 	}//bee const
