@@ -11,8 +11,8 @@
 	var bufferCanvasCtx = null;
 
 
-
 	var beesArr = [];
+
 
 	//timer
 	var beeCannon = null;
@@ -41,9 +41,7 @@ Bee function
 	
 		this.type = type || 'no type';
 
-		this.health = function() {
-			addHealth();
-		}
+		
 
 		//added automatically by addBee funct
 		//this.id = id || null;
@@ -56,22 +54,20 @@ Bee function
 	Bee.prototype.addHealth = function() {
 
 		if (this.type == "qBee") {
-			return {
-				health:100
-			}
+			this.health = 100;
+			return this.health;
+
 		}
 		else if (this.type == "wBee") {
-			return {
-				health:75
-			}
+			this.health = 75;
 		}
 		else if (this.type == "dBee") {
-			return {
-				health:50
-			}
+			this.health = 50;
 		}
+
 	}//getHealth
 
+	console.log()
 
 	//bee functions| getHit (substract from health)
 	Bee.prototype.getHit = function() {
@@ -133,7 +129,7 @@ addBee function
 		console.log('step:3 enter addBee');
 
 
-debugger;
+		debugger;
 		
 		function addToArr(obj) {
 
@@ -145,6 +141,7 @@ debugger;
 				count++;
 				dcount++;
 					obj.type = "dBee";
+					obj.health = 100;
 					beesArr.push(obj);
 					console.log(obj);						
 
@@ -155,6 +152,7 @@ debugger;
 				count++;
 				wcount++;
 					obj.type = "wBee";
+					obj.health = 75;
 					beesArr.push(obj);
 					console.log(obj);	
 
@@ -165,6 +163,7 @@ debugger;
 				count++;
 				qcount++;
 					obj.type = "qBee";
+					obj.health = 50;
 					beesArr.push(obj);
 					console.log(obj);	
 
