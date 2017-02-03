@@ -39,7 +39,7 @@
 Bee function
 ******/	
 
-	function Bee(type,health) {
+	function Bee(type) {
 	
 		this.type = type || 'no type';
 
