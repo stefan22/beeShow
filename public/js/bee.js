@@ -23,7 +23,9 @@
 	var qcount = 0;		//queen bees counter
 	var wcount = 0;		//worker bees counter
 	var dcount = 0;		//drone bees counter
-	var count = 0;		//counting b-adds	
+	var count = 0;		//counting b-adds
+	//i want an id!
+	var id=0;	
 	
 
 	//max settings
@@ -138,10 +140,12 @@ addBee function
 
 				//drones less than max setting
 				if (dcount < mxdb) {
+				id++;
 				count++;
 				dcount++;
 					obj.type = "dBee";
 					obj.health = 100;
+					obj.id = id;
 					beesArr.push(obj);
 					console.log(obj);						
 
@@ -149,10 +153,12 @@ addBee function
 
 				//workers less than max setting
 				else if (wcount < mxwb) {
+				id++;
 				count++;
 				wcount++;
 					obj.type = "wBee";
 					obj.health = 75;
+					obj.id = id;
 					beesArr.push(obj);
 					console.log(obj);	
 
@@ -160,10 +166,12 @@ addBee function
 
 				//queens less than max allowed
 				else if (qcount < mxqb) {
+				id++;
 				count++;
 				qcount++;
 					obj.type = "qBee";
 					obj.health = 50;
+					obj.id = id;
 					beesArr.push(obj);
 					console.log(obj);	
 
