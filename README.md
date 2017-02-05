@@ -4,16 +4,32 @@
 - type grunt
 
 
+<hr />
+  
+  <br />
+  
+  <kbd>bees-on-canvas</kbd>
+  ![bees-on-canvas-](public/builds/assets/images/beesoncanvas.png?raw=true "mobile" target="_blank")
+
 
 <hr />
   
   <br />
   
-  <kbd>top-bees-pg</kbd>
-  ![bees page](topbee.png?raw=true "mobile" target="_blank")
+  <kbd>topsection</kbd>
+  ![topsection](public/builds/assets/images/topsection.png?raw=true "mobile" target="_blank")
+
+
+
+<hr />
   
+  <br />
   
-  
+  <kbd>side-navigation</kbd>
+  ![side-navigation](public/builds/assets/images/sidenavigation.png?raw=true "mobile" target="_blank")
+
+
+
   
   
   <hr />
