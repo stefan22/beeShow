@@ -16,6 +16,7 @@ side navigation
 #mainContent {
 	
 	#mainmiddle1 {
+		width: 15% !important;
 		padding: 0;
 		section.apiarea {
 			position: relative;
@@ -30,10 +31,16 @@ side navigation
 			}//img
 			background-color: $botfoot;
 			margin:0;
-			min-height: 365px;
+			min-height: 347px;
+			max-width: 285px;
 			border-bottom-left-radius: 0px;
     		border-bottom-right-radius: 12px;
 			border:1px solid darken($purple,15);  /*440144*/
+
+			.curtain {
+				background-color: "transparent";
+				
+			}//curtain
 
 		}//section apiarea
 		.sidenavL {

@@ -669,11 +669,9 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropd
 #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip a.dropdown-toggle:hover,
 body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six a.dropdown-toggle:hover {
   background-color: #6f1686;
-  box-shadow: 1px 0px 1px 1px rgba(85, 8, 102, 0.55);
   border-top: 1px solid purple;
-  border-bottom: 1px solid purple;
 }
-/* line 203, ../../sass/_navlayout.scss */
+/* line 202, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:focus:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus:active, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:focus:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus:visited, #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:focus:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:focus:hover,
 #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a,
 #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:active,
@@ -682,36 +680,36 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:visited,
 #mainmenu #primary-nav ul #nav-six body #mainWrapper #wrapper #top #skip .dropdown-menu > li > a:hover,
 body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdown-menu > li > a:hover {
-  background-color: #b3261b;
+  background-color: #74198c;
 }
-/* line 207, ../../sass/_navlayout.scss */
+/* line 206, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six .nav .open > a:focus, #mainmenu #primary-nav ul #nav-six .nav body #mainWrapper #wrapper #top #skip .open > a:focus:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .nav .open > a:focus:active, #mainmenu #primary-nav ul #nav-six .nav body #mainWrapper #wrapper #top #skip .open > a:focus:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .nav .open > a:focus:visited, #mainmenu #primary-nav ul #nav-six .nav body #mainWrapper #wrapper #top #skip .open > a:focus:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .nav .open > a:focus:hover {
   background-color: #b3261b;
 }
-/* line 210, ../../sass/_navlayout.scss */
+/* line 209, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six ul.dropdown-menu {
-  min-width: 131px;
-  top: 104%;
-  background-color: #b3261b;
+  min-width: 120px;
+  top: 101%;
+  background-color: rgba(77, 17, 90, 0.92);
 }
-/* line 215, ../../sass/_navlayout.scss */
+/* line 214, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a, #mainmenu #primary-nav ul #nav-six ul.dropdown-menu body #mainWrapper #wrapper #top #skip li > a:active, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a:active, #mainmenu #primary-nav ul #nav-six ul.dropdown-menu body #mainWrapper #wrapper #top #skip li > a:visited, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a:visited, #mainmenu #primary-nav ul #nav-six ul.dropdown-menu body #mainWrapper #wrapper #top #skip li > a:hover, body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > a:hover {
   font-size: 13px;
   font-weight: normal;
   letter-spacing: .5px;
   display: inline-block;
-  padding-left: 0;
-  padding-right: 2px;
+  padding: 2px 5px 2px 0;
+  border-bottom: 1px solid #4d115a;
   vertical-align: middle;
 }
 @-webkit-keyframes slide-down {}
 @-moz-keyframes slide-down {}
 @-ms-keyframes slide-down {}
 @-o-keyframes slide-down {}
-/* line 226, ../../sass/_navlayout.scss */
+/* line 225, ../../sass/_navlayout.scss */
 #mainmenu #primary-nav ul #nav-six ul.dropdown-menu li > span i.material-icons {
   vertical-align: middle;
-  margin-left: 3px;
+  margin-left: 0px;
   font-size: 13px;
 }
 
@@ -1146,20 +1144,22 @@ side navigation
 }
 /* line 18, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 {
+  width: 15% !important;
   padding: 0;
 }
-/* line 20, ../../sass/_sidenav.scss */
+/* line 21, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 section.apiarea {
   position: relative;
   background-color: #4d115a;
   margin: 0;
-  min-height: 365px;
+  min-height: 347px;
+  max-width: 285px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 12px;
   border: 1px solid black;
   /*440144*/
 }
-/* line 22, ../../sass/_sidenav.scss */
+/* line 23, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 section.apiarea img {
   max-width: 27%;
   margin-left: 15px;
@@ -1168,7 +1168,11 @@ side navigation
   left: 5px;
   top: 10px;
 }
-/* line 39, ../../sass/_sidenav.scss */
+/* line 40, ../../sass/_sidenav.scss */
+#mainContent #mainmiddle1 section.apiarea .curtain {
+  background-color: "transparent";
+}
+/* line 46, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL {
   height: 100%;
   width: 0;
@@ -1181,7 +1185,7 @@ side navigation
   transition: all 0.5s;
   padding-top: 60px;
 }
-/* line 40, ../../sass/_sidenav.scss */
+/* line 47, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL .closebtn {
   position: absolute;
   top: 10px;
@@ -1189,7 +1193,7 @@ side navigation
   font-size: 36px;
   margin-left: 50px;
 }
-/* line 57, ../../sass/_sidenav.scss */
+/* line 64, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL a, #mainContent #mainmiddle1 .sidenavL body #mainWrapper #wrapper #top #skip a:active, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL a:active, #mainContent #mainmiddle1 .sidenavL body #mainWrapper #wrapper #top #skip a:visited, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL a:visited, #mainContent #mainmiddle1 .sidenavL body #mainWrapper #wrapper #top #skip a:hover, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL a:hover {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -1198,30 +1202,30 @@ side navigation
   display: block;
   transition: 0.3s;
 }
-/* line 66, ../../sass/_sidenav.scss */
+/* line 73, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 .sidenavL:hover, #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus, #mainContent #mainmiddle1 .sidenavL .offcanvas body #mainWrapper #wrapper #top #skip a:focus:active, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus:active, #mainContent #mainmiddle1 .sidenavL .offcanvas body #mainWrapper #wrapper #top #skip a:focus:visited, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus:visited, #mainContent #mainmiddle1 .sidenavL .offcanvas body #mainWrapper #wrapper #top #skip a:focus:hover, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 .sidenavL .offcanvas a:focus:hover {
   color: #f1f1f1;
 }
-/* line 71, ../../sass/_sidenav.scss */
+/* line 78, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL {
   display: inline-block;
   padding: 16px;
 }
-/* line 74, ../../sass/_sidenav.scss */
+/* line 81, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL .panopen {
   position: absolute;
   left: -9999px;
   opacity: 0;
   transition: all 1s;
 }
-/* line 83, ../../sass/_sidenav.scss */
+/* line 90, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL .panclose {
   position: absolute;
   left: 0;
   opacity: 1;
   transition: all 3s;
 }
-/* line 91, ../../sass/_sidenav.scss */
+/* line 98, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL a#sesame, #mainContent #mainmiddle1 #mainL body #mainWrapper #wrapper #top #skip a#sesame:active, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 #mainL a#sesame:active, #mainContent #mainmiddle1 #mainL body #mainWrapper #wrapper #top #skip a#sesame:visited, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 #mainL a#sesame:visited, #mainContent #mainmiddle1 #mainL body #mainWrapper #wrapper #top #skip a#sesame:hover, body #mainWrapper #wrapper #top #skip #mainContent #mainmiddle1 #mainL a#sesame:hover {
   background: url("../assets/images/burger.png") no-repeat;
   width: 29px;
@@ -1231,12 +1235,12 @@ side navigation
   line-height: 26px;
   margin-left: 13.5em;
 }
-/* line 103, ../../sass/_sidenav.scss */
+/* line 110, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL h2 {
   font-size: 26px;
   line-height: 32px;
 }
-/* line 107, ../../sass/_sidenav.scss */
+/* line 114, ../../sass/_sidenav.scss */
 #mainContent #mainmiddle1 #mainL p {
   padding: 15px 0;
   font-size: 16px;

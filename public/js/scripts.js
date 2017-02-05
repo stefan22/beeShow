@@ -7,27 +7,33 @@ var footersYear = function() {
 }
 //call it 
 
+var sideNav = document.querySelector('section.apiarea');
+
 function openNav() {
     var aprire = document.getElementById('aprire');
     document.getElementById("mySidenavL").style.width = "285px";
-    document.getElementById("mainL").style.marginLeft = "285px";
+    //document.getElementById("mainL").style.marginLeft = "285px";
     document.getElementById('bee6').style.opacity = "0";
+    document.getElementById('sesame').style.opacity = "0";
     
 
     //aprire
+    aprire.classList.remove('panclose');
     aprire.classList.add('panclose');
     aprire.classList.add('panopen');
     //bee6
-    document.getElementById('bee6').style.paddingLeft = "9em";
-    document.getElementById('bee6').style.maxWidth = "285px";
+    document.getElementById('bee6').style.paddingLeft = "0em";
+   
 
     document.getElementById('bee6').style.transition = "slide-down,width,2s";
 
+
+    //toggle sideNav
+    sideNav.classList.remove('apiarea');
+    sideNav.classList.add('curtain');
     
 
-    
-
-}
+}//openNav
 
 function closeNav() {
     var aprire = document.getElementById('aprire');
@@ -38,12 +44,19 @@ function closeNav() {
     //aprire
     aprire.classList.remove('panopen');
     aprire.classList.add('panclose');
+
+    //toggle sideNav
+    sideNav.classList.add('apiarea');
+    sideNav.classList.remove('curtain');
+
     
 
     //bee6  //230
     document.getElementById('bee6').style.paddingLeft = "0";
-    document.getElementById('bee6').style.maxWidth = "90px";
-    document.getElementById('bee6').style.transition = "slide-up,width,2s";
+    document.getElementById('bee6').style.maxWidth = "70px";
+    document.getElementById('bee6').style.transition = "slide-up,width,1s";
+    document.getElementById('sesame').style.opacity = "1";
+    document.getElementById('sesame').style.marginLeft = '14.5em';
 
 
     

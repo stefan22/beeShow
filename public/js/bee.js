@@ -16,6 +16,7 @@
 
 	//timer
 	var beeCannon = null;
+	var beeCannon2 = null;
 
 	
 	//initiliaze counters
@@ -43,19 +44,73 @@ Bee function
 	
 		this.type = type || 'no type';
 
-		// adding positioning
-		// -------------------
-		// x-axis left side at different positions
-		this.x = Math.random() * 3;
-		// y-axis start off from the middle of page 
-		this.y = context.canvas.height/2;
+		/* adding starting positioning: note | not finished - i need to
+		   still make them fly and this time bounce off the walls or something
+		   like that.
+		------------------------------
+		   it's easier to add them across the larger of the two sizes.
+		   Here, I have 15 bees and my canvas is 400px tall so makes it 
+		   difficult to spread them across the y-axis.
+		   If you must, then need a bigger beehive.. or increasing the
+		   height - otherwise bees will overlapped too much.
+	    ------------------------------
+		*/ 
+
+		// gets x positions from zero to canvas width (left-to-right)
+		this.x = Math.round(Math.random() * context.canvas.width)
+		// get y positions across y-axis (or canvas height)
+		this.y = Math.round(Math.random() * context.canvas.height);
 
 		//fly-off
 		this.fly = (Math.random() * 5) +7;
 
 		//for now all bees same size
-		this.width = 25;
-		this.height = 40;
+		this.width = 18;
+		this.height = 22;
+
+
+		//handle for outercanvas border at init style
+		var oc = document.getElementById('outercanvas');
+		oc.style.cursor = "pointer";
+		oc.style.borderWidth = "1px";
+
+		
+		//image handle | for later, bees arent flying yet
+		var ibee = document.getElementById('ibee');
+		//right positioning
+		ibee.style.right = this.width;
+		//bottom position
+		ibee.style.bottom = this.height;
+
+		//for now bee img resets canvas   //n bees only load on page refresh
+		ibee.onclick = function() {
+			//reset bees array but does not remove bees
+			beesArr = [];   // or beesArr.length = 0;
+			//remove bees
+			beeDraw();
+			//remove border
+			oc.style.borderWidth = 0;
+
+
+			document.onkeydown = function(e) {
+  			  e.preventDefault();
+			  if (e.keyCode === 90) {
+			  	//clear previous console.logs from here on
+			  	console.clear();
+			    console.log('z key pressed');
+			    //console.log(e);					//keyboardEvent
+			    //console.log(e.which);				//90
+			    //after bees been cleared only
+			    this.location.reload();
+
+
+			  }
+			};//onkeydown
+		};//onclick
+
+
+		
+
 
 		
 
@@ -124,11 +179,42 @@ init function
 		//set interval timer -> add/shoot bees randomly to page
 		beeCannon = setInterval(addBee,200);
 		console.log('step:2 call addBee');
-
-		//draw blank page
-		//drawPage();
+		beeDraw();
+		//calling beeDraw
+		beeCannon2 = setInterval(beeDraw,100);
 
 	}//init
+
+
+/*****
+beeDraw function
+******/
+
+	function beeDraw() {
+		console.log('step4: entered beeDraw');
+		//canvas bg color
+		bufferCanvasCtx.fillStyle = "white";   //"rgba(255, 230, 255, 0.1)";	//purple
+		bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
+
+
+		//loop array
+		for (var i=0; i < beesArr.length; i++) {
+			//bees are colored here
+			bufferCanvasCtx.fillStyle = "rgba(178, 102, 255, 0.75)";
+			bufferCanvasCtx.fillRect(
+				beesArr[i].x,
+				beesArr[i].y,
+				beesArr[i].width,
+				beesArr[i].height
+			);//rect
+
+		}//for loop
+
+		//copy buffer
+		context.drawImage(bufferCanvas,0,0,bufferCanvas.width, bufferCanvas.height);
+
+
+	}//beeDraw	
 
 
 
@@ -142,7 +228,7 @@ addBee function
 		console.log('step:3 enter addBee');
 
 
-		debugger;
+		//debugger;
 		
 		function addToArr(obj) {
 
@@ -193,18 +279,27 @@ addBee function
 			else {
 				//cut off timer all bees been added
 				clearInterval(beeCannon);
-				console.log('added 15 bees and getting turn off');
+				clearInterval(beeCannon2);
+				//console.log('all bees created and added - shutting off timer');
+				
 
 			}//reached max bcount - can't add anymore bees
+			
 
 
-		}//addToArr
-		
-		
+	}//addToArr
+
+
+
+
+
+/*****  not created yet for loop
+beegate function
+*****/
 
 		//Adding all bees with for loops
-		console.log('starts adding new objects here');
-		debugger;
+		console.log('beegate - bee creation begins');
+		//debugger;
 		for(var i=0; i< mxdb; i++) {
 			addToArr(new Bee());
 		}
@@ -242,96 +337,5 @@ addBee function
 
 //self exec function is part of the window.object
 window.console.log('event fired up');
-
-
-
-/*
-===================== getting back at this time =======================
-
-	Bee {
-		
-		type:'dBee',
-		health:50,
-		id:1
-
-	}
-
-
-		beesArr = [
-(pos)
-0.		{
-			type:'dBee',
-			health:50,
-			id:1
-		},
-
-1.		{
-			type:'dBee',
-			health:50,
-			id:2
-		},
-
-2.		{
-			type:'dBee',
-			health:50,
-			id:3
-		},
-
-3.		{
-			type:'dBee',
-			health:50,
-			id:4
-		},
-
-4.		{
-			type:'dBee',
-			health:50,
-			id:5
-		},
-
-5.		{
-			type:'dBee',
-			health:50,
-			id:6
-		},
-
-6.		{
-			type:'wBee',
-			health:75,
-			id:7
-		},
-
-7.		{
-			type:'wBee',
-			health:75,
-			id:8
-		},
-
-8.		{
-			type:'wBee',
-			health:75,
-			id:9
-		},
-
-
-		...
-		.....
-		.........
-
-
-14.		{
-			type:'qBee',
-			health:100,
-			id:15
-		}
-
-
-	]
-
-	length:15
-	Array[0]
-
-=========================== end ==========================================
-*/
 
 
