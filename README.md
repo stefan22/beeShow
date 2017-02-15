@@ -1,4 +1,6 @@
-## beeShow  :honeybee:
+## beeShow  :honeybee:   added it online but not working just yet  - ill fix it this wknd
+
+
 - git clone
 - npm,bower,bundler dependencies
 - type grunt
