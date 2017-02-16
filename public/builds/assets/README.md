@@ -1,7 +1,25 @@
-## beeShow  :honeybee:
+## beeShow  :honeybee:   added it online but not working just yet  - ill fix it this wknd
+
+
 - git clone
 - npm,bower,bundler dependencies
 - type grunt
+
+
+<hr />
+  
+  <br />
+  
+  <kbd>bees-on-canvas</kbd>
+  ![bees-on-canvas-](public/builds/assets/images/beesoncanvas.png?raw=true "mobile" target="_blank")
+
+
+<hr />
+  
+  <br />
+  
+  <kbd>topsection</kbd>
+  ![topsection](public/builds/assets/images/topsection.png?raw=true "mobile" target="_blank")
 
 
 
@@ -9,11 +27,11 @@
   
   <br />
   
-  <kbd>top-bees-pg</kbd>
-  ![bees page](topbee.png?raw=true "mobile" target="_blank")
-  
-  
-  
+  <kbd>side-navigation</kbd>
+  ![side-navigation](public/builds/assets/images/sidenavigation.png?raw=true "mobile" target="_blank")
+
+
+
   
   
   <hr />
