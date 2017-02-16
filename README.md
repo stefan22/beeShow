@@ -6,20 +6,24 @@
 - type grunt
 
 
-<hr />
-  
-  <br />
-  
-  <kbd>bees canvas</kbd>
-  ![bees-on-canvas-](public/builds/assets/images/beescanvas.png?raw=true "mobile" target="_blank")
 
-
-<hr />
+  
+ 
   
   <br />
   
   <kbd>bees-on-canvas</kbd>
   ![bees-on-canvas-](public/builds/assets/images/beesoncanvas.png?raw=true "mobile" target="_blank")
+  
+  
+  <hr />
+   <br />
+  
+  <kbd>bees canvas</kbd>
+  ![bees-on-canvas-](public/builds/assets/images/beescanvas.png?raw=true "mobile" target="_blank")
+
+
+
 
 
 <hr />
