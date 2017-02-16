@@ -78,34 +78,32 @@
         
         
     }//mainmiddle
-    #outercanvas {
-        border: 4px solid rgba(197, 140, 255, 0.85);
+    
+    #outercanvas   {
+      
         cursor: pointer;
         margin-bottom: 3em;
         padding: 1.5em;
         border-radius: 5px;
-    
-        box-shadow: inset 0px 0px 7px 3px rgba(236, 246, 170, 0.9);
-
-
-
-
-
-    }//outercanvas
-    #canvas   {
-        
-        display: block;
-        float: none;
-        
-        border: 3px solid rgba(77, 17, 90, 0.75);
-        padding: 0;
-        background-color: rgba(252, 254, 241, 0.25);
+        box-shadow: 0px 1px 1px 1px rgba(26, 19, 19, 0.35);
+        background: url(../assets/images/beehive6.jpg);
+        opacity: .85;
+        span {
+            font-family: $font-primary;
+            color:$white;
+            line-height: 20px;
+        }
         
         #beeCanvas {
             display: block;
-            background-color: #eee;
-            max-height: 450px;
+            height: 100%;
             width: 100%;
+            background: url(../assets/images/beehive.jpg);
+            background-repeat: repeat-x;
+            z-index: -10000;
+            padding: 1.5em;
+            background: #838184;
+            outline: 3px solid #a5644d;
         
         }//beeCanvas
 
@@ -114,7 +112,7 @@
        
 
 
-    }//canvas
+    }//outercanvas
 
 
     #mainbottom {
