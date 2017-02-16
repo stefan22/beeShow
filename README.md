@@ -1,4 +1,4 @@
-## beeShow  :honeybee:   added it online but not working just yet  - ill fix it this wknd
+## beeShow  :honeybee:   added it online - remains animating bees
 
 
 - git clone
