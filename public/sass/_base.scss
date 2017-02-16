@@ -74,24 +74,28 @@ html,body {
 	padding: 0;
 }
 
-#mainWrapper {
-	height: 100%;
-	/* equal to footer height */
-  	margin-bottom: -300.64px;
-}
 
-#mainWrapper:after {
-	content: "";
-	display: block;
-}
 
-#mainFooter, #mainWrapper:after {
-	min-height: 300px;
+
+
+#mainFooter, #mainContent:after {
+	min-height: 312px;
 	 
 }
 
 #mainFooter {
-	margin-top:-300.64px;
+	margin-top:-312px;
+}
+
+#mainContent {
+	
+	/* equal to footer height */
+  	margin-bottom: -312px;
+}
+
+#mainContent:after {
+	content: "";
+	display: block;
 }
 
 /*
@@ -179,8 +183,10 @@ p {
 a {
 	text-decoration: none;
 	cursor:pointer;
+	font-family: $font-secondary;
 	background:transparent;
 	font-size: 15px;
+	line-height: 150%;
 	@include animation('slide-down 5s 3');
 	color:darken($green,5);
 	&:focus {
