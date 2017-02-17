@@ -37,6 +37,13 @@
                     max-height: 57px;
                     max-width: 57px;
                     font-size: 13px;
+                    @include xsmall {
+                        img  {
+                            max-width: 36px;
+                            max-height: 42px;
+
+                        }  
+                    }//small
                     &:hover img {
                         transform:scale(1.1);
                         transform:scale(1.1);
@@ -55,7 +62,8 @@
                         margin-left: 0;
                     }
                     @include xsmall {
-                        max-width: 40px;
+                        max-width: 36px;
+                        height: 42px;
                     }//xsmall
                 } //a
             } //socialIcons
@@ -75,6 +83,9 @@
                 ul.related {
                     padding:3px 0;
                     @include xsmall {
+                        li {
+                            line-height: 24px;
+                        }
                         span {
                             display: none;
                         }//span
@@ -99,7 +110,9 @@
             }//relatedLinks
                 
             #moreAboutUs {
-                //empty
+                @include xsmall {
+                    margin-bottom: 1em;
+                }
             }
             //moreAboutUs
          
@@ -142,6 +155,7 @@
                     }//img
                     @include small {
                     img  {   
+
                         max-width: 60px !important;
                         display: inline-block;
                         vertical-align: middle;

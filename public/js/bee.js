@@ -44,18 +44,6 @@ Bee function
 	
 		this.type = type || 'no type';
 
-		/* adding starting positioning: note | not finished - i need to
-		   still make them fly and this time bounce off the walls or something
-		   like that.
-		------------------------------
-		   it's easier to add them across the larger of the two sizes.
-		   Here, I have 15 bees and my canvas is 400px tall so makes it 
-		   difficult to spread them across the y-axis.
-		   If you must, then need a bigger beehive.. or increasing the
-		   height - otherwise bees will overlapped too much.
-	    ------------------------------
-		*/ 
-
 		// gets x positions from zero to canvas width (left-to-right)
 		this.x = Math.round(Math.random() * context.canvas.width)
 		// get y positions across y-axis (or canvas height)
@@ -200,7 +188,8 @@ beeDraw function
 		//loop array
 		for (var i=0; i < beesArr.length; i++) {
 			//bees are colored here
-			bufferCanvasCtx.fillStyle = "rgba(178, 102, 255, 0.75)";
+			//bufferCanvasCtx.fillStyle = "rgba(178, 102, 255, 0.75)";	
+			bufferCanvasCtx.fillStyle = "#400d63";	//#460d63
 			bufferCanvasCtx.fillRect(
 				beesArr[i].x,
 				beesArr[i].y,

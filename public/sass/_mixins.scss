@@ -119,7 +119,7 @@ $default-text-shadow-color: rgba(99,99,99,.7);
 Media Queries
 
 --------------------------------- */
-
+$under379:379px;
 $extraSmall: 380px;
 $small:768px;
 $medium:992px;
@@ -128,14 +128,14 @@ $large:1200px;
 
 /* 320 under */
 @mixin xsmall {
-  @media (max-width: #{$extraSmall})  {
+  @media (max-width: #{$under379})  {
     @content;
   }
 }
 
 
 
-/* 320 - 767 */
+/* 380 - 767 */
 @mixin small {
   @media (min-width: #{$extraSmall}) and (max-width: #{$small - 1}) {
     @content;

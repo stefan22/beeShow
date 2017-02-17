@@ -3,19 +3,26 @@
 side navigation
 ---------------------------------------------
 */
-/* 460px */
+
+/* 320 - 767  */
 @include small {
-    .sidenavL {
-    	padding-top: 15px;
-    	a  {
-    		font-size: 18px;
-    	}//a
-    }//sidenav
-}
+	#mainmiddle1 {
+		display: none;
+	}
+  
+}//small
+
+@include xsmall {
+	#mainmiddle1 {
+		display: none;
+	}
+
+}//under379
 
 #mainContent {
 	
 	#mainmiddle1 {
+		 
 		width: 15% !important;
 		padding: 0;
 		section.apiarea {

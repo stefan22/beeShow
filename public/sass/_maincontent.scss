@@ -72,8 +72,10 @@
         table.table {
             background-color: rgba(235, 235, 240, 0.35);
         }
+        @mixin desktop {
+            padding-left: 3em;
+        }
         
-        padding-left: 3em;
         
         
         
@@ -88,12 +90,36 @@
         box-shadow: 0px 1px 1px 1px rgba(26, 19, 19, 0.35);
         background: url(../assets/images/beehive6.jpg);
         opacity: .85;
+        @include xsmall {
+            img#ibee {
+                max-width: 45px !important;
+                right: 57px !important;
+                bottom:45px !important;
+            }//img
+        }//xsmall
+        img#ibee {
+            max-width: 60px;
+            height: auto;
+            position: absolute;
+            right: 100px;
+            bottom: 70px;
+        }
         span {
+            float:right;
+            @include xsmall {
+                display: block !important;
+                float: none;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+            }//xsmall
             font-family: $font-primary;
             color:$white;
             line-height: 20px;
             text-shadow: -1px 1px black;
         }
+
+        
         
         #beeCanvas {
             display: block;

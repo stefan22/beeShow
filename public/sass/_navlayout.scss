@@ -21,6 +21,11 @@ header#header {
             display: block;
         
             img#beetoplog {
+                @include xsmall {
+                    max-width: 75px;
+                    margin:0 auto;
+                    margin-bottom: 1em;
+                }//xsmall
                 max-width: 100px;
                 height: auto;
                 display: block;
