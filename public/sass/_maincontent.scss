@@ -85,11 +85,8 @@
       
         cursor: pointer;
         margin-bottom: 3em;
-        padding: 1.5em;
-        border-radius: 5px;
-        box-shadow: 0px 1px 1px 1px rgba(26, 19, 19, 0.35);
-        background: url(../assets/images/beehive6.jpg);
-        opacity: .85;
+        opacity: .95;
+        border-radius: 4px;
         @include xsmall {
             img#ibee {
                 max-width: 45px !important;
@@ -103,6 +100,11 @@
             position: absolute;
             right: 140px;
             bottom: 90px;
+            z-index: 90000;
+            box-shadow: 0px 0px 4px 1px #2e0935;
+            background-color: rgb(252, 255, 234);
+            padding: .2em;
+            border-radius: 4px;
         }
         span {
             float:right;
@@ -125,12 +127,11 @@
             display: block;
             height: 100%;
             width: 100%;
-            background: url(../assets/images/beehive.jpg);
-            background-repeat: repeat-x;
+            background-repeat: repeat;
             z-index: -10000;
-            padding: 1.5em;
-            background: #838184;
-            outline: 3px solid #a5644d;
+            padding: .35em;
+           
+        
         
         }//beeCanvas
 

@@ -218,11 +218,16 @@ beeDraw function
 		//loop array
 		for (var i=0; i < beesArr.length; i++) {
 			//bees are colored here
-			//bufferCanvasCtx.fillStyle = "#400d63";	//#460d63
-			//add some colors
-			for (var j=0; j<beesArr.length; j++) {
+			//bufferCanvasCtx.fillStyle = "#400d63";	//this is the old purple
+			//modifyng red and green values | blue fixed
+			for (var j=0; j<beesArr.length*2.5; j++) {
 			bufferCanvasCtx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
 										Math.floor(255 - 42.5 * j) + ', 0)';
+			bufferCanvasCtx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +							
+										  Math.floor(255 - 42.5 * j) + ')';
+ 			bufferCanvasCtx.beginPath();
+ 			bufferCanvasCtx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);										  
+ 			bufferCanvasCtx.stroke();
 			}							
 			bufferCanvasCtx.stroke();
 			bufferCanvasCtx.fillRect(

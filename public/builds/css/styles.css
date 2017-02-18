@@ -802,29 +802,31 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
 #mainContent #outercanvas {
   cursor: pointer;
   margin-bottom: 3em;
-  padding: 1.5em;
-  border-radius: 5px;
-  box-shadow: 0px 1px 1px 1px rgba(26, 19, 19, 0.35);
-  background: url(../assets/images/beehive6.jpg);
-  opacity: .85;
+  opacity: .95;
+  border-radius: 4px;
 }
 @media (max-width: 379px) {
-  /* line 94, ../../sass/_maincontent.scss */
+  /* line 91, ../../sass/_maincontent.scss */
   #mainContent #outercanvas img#ibee {
     max-width: 45px !important;
     right: 57px !important;
     bottom: 45px !important;
   }
 }
-/* line 100, ../../sass/_maincontent.scss */
+/* line 97, ../../sass/_maincontent.scss */
 #mainContent #outercanvas img#ibee {
   max-width: 60px;
   height: auto;
   position: absolute;
   right: 140px;
   bottom: 90px;
+  z-index: 90000;
+  box-shadow: 0px 0px 4px 1px #2e0935;
+  background-color: #fcffea;
+  padding: .2em;
+  border-radius: 4px;
 }
-/* line 107, ../../sass/_maincontent.scss */
+/* line 109, ../../sass/_maincontent.scss */
 #mainContent #outercanvas span {
   float: right;
   font-family: "Nobile", serif, arial;
@@ -833,7 +835,7 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
   text-shadow: -1px 1px black;
 }
 @media (max-width: 379px) {
-  /* line 107, ../../sass/_maincontent.scss */
+  /* line 109, ../../sass/_maincontent.scss */
   #mainContent #outercanvas span {
     display: block !important;
     float: none;
@@ -842,27 +844,24 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
     text-align: center;
   }
 }
-/* line 124, ../../sass/_maincontent.scss */
+/* line 126, ../../sass/_maincontent.scss */
 #mainContent #outercanvas #beeCanvas {
   display: block;
   height: 100%;
   width: 100%;
-  background: url(../assets/images/beehive.jpg);
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   z-index: -10000;
-  padding: 1.5em;
-  background: #838184;
-  outline: 3px solid #a5644d;
+  padding: .35em;
 }
-/* line 146, ../../sass/_maincontent.scss */
+/* line 147, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea {
   margin-bottom: 2em;
 }
-/* line 148, ../../sass/_maincontent.scss */
+/* line 149, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea .headline {
   margin-bottom: .5em;
 }
-/* line 150, ../../sass/_maincontent.scss */
+/* line 151, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea .headline i.material-icons {
   color: #a62319;
   font-size: 24px;
