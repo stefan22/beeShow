@@ -211,22 +211,30 @@ beeDraw function
 		console.log('step4: entered beeDraw');
 		//canvas bg color
 		
-		bufferCanvasCtx.fillStyle = "white";   
-		bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
+		//bufferCanvasCtx.fillStyle = "white";   
+		//bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
 		
 
 		//loop array
 		for (var i=0; i < beesArr.length; i++) {
+			//global alpha transparency
+			bufferCanvasCtx.globalAlpha = .9;
 			//bees are colored here
 			//bufferCanvasCtx.fillStyle = "#400d63";	//this is the old purple
 			//modifyng red and green values | blue fixed
 			for (var j=0; j<beesArr.length*2.5; j++) {
-			bufferCanvasCtx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
-										Math.floor(255 - 42.5 * j) + ', 0)';
-			bufferCanvasCtx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +							
-										  Math.floor(255 - 42.5 * j) + ')';
+			bufferCanvasCtx.fillStyle = 'rgb(' + Math.floor(255 - 25.5 * i) + ', ' +
+										Math.floor(255 - 9.5 * j) + ', 255)';
+			bufferCanvasCtx.strokeStyle = 'rgb(110, ' + Math.floor(255 - 42.5 * i) + ', ' +							
+										  Math.floor(255 - 22.5 * j) + ')';
+ 			
  			bufferCanvasCtx.beginPath();
+
+ 			//bg canvas circles
  			bufferCanvasCtx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);										  
+ 			
+ 			//bg canvas colors
+ 			bufferCanvasCtx.fillRect(j * 25, i * 25, 25, 25);
  			bufferCanvasCtx.stroke();
 			}							
 			bufferCanvasCtx.stroke();
@@ -249,7 +257,7 @@ beeDraw function
 		context.fillStyle = 'red';
 
 	    circle.moveTo(95, 12);
-	    circle.arc(120, 55, 55, 0, 5 * Math.PI);
+	    circle.arc(120, 55, 8, 0, 5 * Math.PI);
 	    context.fill(circle);
 
 		
