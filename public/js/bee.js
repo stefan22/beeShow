@@ -1,6 +1,9 @@
 (function() {
 
+
+
 	//globals
+
 
 	//canvas
 	var canvas = null;
@@ -13,6 +16,12 @@
 
 	var beesArr = [];
 
+	//purple reset button bee handle
+	var ibee = document.getElementById('ibee');
+
+	//image
+	var img = new Image();
+	img.src = "../../public/builds/assets/images/bee2.png";
 
 	//timer
 	var beeCannon = null;
@@ -25,7 +34,7 @@
 	var wcount = 0;		//worker bees counter
 	var dcount = 0;		//drone bees counter
 	var count = 0;		//counting b-adds
-	//i want an id!
+	//this id is counter different that other added to object property
 	var id=0;	
 	
 
@@ -35,6 +44,58 @@
 	var mxdb = 7;		//max drone bees
 	var mxbees = (mxqb + mxwb + mxdb); 	//max bees num
 
+	//keyup-keydown event
+	var allowed = true;
+
+
+	
+	
+/*****
+Bee Controls
+******/	
+
+	//on click Bee clears Canvas, Z reload same settings, X re-shuffle bees
+	ibee.onclick = function() {
+		//clear canvas method
+		context.clearRect(0,0,canvas.width, canvas.height);
+		//press z to re-run function after canvas removed
+		document.onkeydown = function(e) {
+			  e.preventDefault();
+
+			   if (e.keyCode === 90) {
+				// re-run function so long canvas has been clear	   
+				   init();
+
+			   }//if pressed z reload
+
+			  //re-shuffle bees X
+			  else if(e.keyCode == 88) {
+			  	context.clearRect(0,0,canvas.width, canvas.height);
+		  		beesArr = [];
+		  		qcount = 0;		
+				wcount = 0;		
+				dcount = 0;		
+				count = 0;
+				id=0;
+				beeCannon = null;
+				beeCannon2 = null;
+			  	init();
+			  }
+		  
+
+			  //hard reset
+			  else if(e.keyCode == 80) {
+			  	context.clearRect(0,0,canvas.width, canvas.height);
+			  	window.location.reload();
+			  }
+
+		    
+		};//onkeydown
+	  
+
+	};//onclick
+
+
 
 /*****
 Bee function
@@ -42,12 +103,15 @@ Bee function
 
 	function Bee(type) {
 	
-		this.type = type || 'no type';
+		this.type = type;
 
 		// gets x positions from zero to canvas width (left-to-right)
-		this.x = Math.round(Math.random() * context.canvas.width)
+		this.x = Math.round(Math.random() * context.canvas.width);
 		// get y positions across y-axis (or canvas height)
 		this.y = Math.round(Math.random() * context.canvas.height);
+		this.id = id;
+
+		
 
 		//fly-off
 		this.fly = (Math.random() * 5) +7;
@@ -55,55 +119,18 @@ Bee function
 		//for now all bees same size
 		this.width = 18;
 		this.height = 22;
-
-
+		
 		//handle for outercanvas border at init style
 		var oc = document.getElementById('outercanvas');
 		oc.style.cursor = "pointer";
 		oc.style.borderWidth = "1px";
 
 		
-		//image handle | for later, bees arent flying yet
-		var ibee = document.getElementById('ibee');
-		//right positioning
-		ibee.style.right = this.width;
-		//bottom position
-		ibee.style.bottom = this.height;
-
-		//for now bee img resets canvas   //n bees only load on page refresh
-		ibee.onclick = function() {
-			//reset bees array but does not remove bees
-			beesArr = [];   // or beesArr.length = 0;
-			//remove bees
-			beeDraw();
-			//remove border
-			oc.style.borderWidth = 0;
-
-
-			document.onkeydown = function(e) {
-  			  e.preventDefault();
-			  if (e.keyCode === 90) {
-			  	//clear previous console.logs from here on
-			  	console.clear();
-			    console.log('z key pressed');
-			    //console.log(e);					//keyboardEvent
-			    //console.log(e.which);				//90
-			    //after bees been cleared only
-			    this.location.reload();
-
-
-			  }
-			};//onkeydown
-		};//onclick
-
-
-		
-
-
-		
-
 
 	}//bee const
+
+
+
 
 
 	//bee functions| getHealth
@@ -154,7 +181,8 @@ init function
 		canvas = document.getElementById('beeCanvas');
 		//ref inst
 		context = canvas.getContext('2d');
-
+		
+		
 		//create new elem based on canvas
 		bufferCanvas = document.createElement("canvas");
 		//new elem inst
@@ -163,6 +191,7 @@ init function
 		//buffers new width and height same as original canvas already in page
 		bufferCanvasCtx.canvas.width = context.canvas.width;
 		bufferCanvasCtx.canvas.height = context.canvas.height;
+
 
 		//set interval timer -> add/shoot bees randomly to page
 		beeCannon = setInterval(addBee,200);
@@ -183,7 +212,7 @@ beeDraw function
 		//canvas bg color
 		bufferCanvasCtx.fillStyle = "white";   //"rgba(255, 230, 255, 0.1)";	//purple
 		bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
-
+		
 
 		//loop array
 		for (var i=0; i < beesArr.length; i++) {
@@ -201,7 +230,7 @@ beeDraw function
 
 		//copy buffer
 		context.drawImage(bufferCanvas,0,0,bufferCanvas.width, bufferCanvas.height);
-
+		
 
 	}//beeDraw	
 
@@ -215,20 +244,17 @@ addBee function
 
 	function addBee() {
 		console.log('step:3 enter addBee');
-
-
-		//debugger;
 		
 		function addToArr(obj) {
 
-
-			if(count < mxbees  || obj.type != "no type") {
+			if(count < mxbees && obj.id < 15 ) {
 
 				//drones less than max setting
 				if (dcount < mxdb) {
 				id++;
 				count++;
 				dcount++;
+				
 					obj.type = "dBee";
 					obj.health = 100;
 					obj.id = id;
@@ -242,6 +268,7 @@ addBee function
 				id++;
 				count++;
 				wcount++;
+				
 					obj.type = "wBee";
 					obj.health = 75;
 					obj.id = id;
@@ -255,6 +282,7 @@ addBee function
 				id++;
 				count++;
 				qcount++;
+				
 					obj.type = "qBee";
 					obj.health = 50;
 					obj.id = id;
@@ -265,6 +293,7 @@ addBee function
 
 			}//outer if
 
+
 			else {
 				//cut off timer all bees been added
 				clearInterval(beeCannon);
@@ -273,38 +302,31 @@ addBee function
 				
 
 			}//reached max bcount - can't add anymore bees
-			
 
 
-	}//addToArr
+		}//addToArr
 
-
-
-
-
-/*****  not created yet for loop
-beegate function
-*****/
 
 		//Adding all bees with for loops
 		console.log('beegate - bee creation begins');
 		//debugger;
 		for(var i=0; i< mxdb; i++) {
-			addToArr(new Bee());
+			addToArr(new Bee("dBee"));
 		}
 		for(var i=0; i< mxwb; i++) {
-			addToArr(new Bee());
+			addToArr(new Bee("wBee"));
 		}
 		for(var i=0; i< mxqb; i++) {
-			addToArr(new Bee());
+			addToArr(new Bee("qBee"));
 		}
-		
-		
+
 
 		
 	}//addBee
 
 		
+
+
 	  
 
 	

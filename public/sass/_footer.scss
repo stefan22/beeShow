@@ -22,7 +22,7 @@
             #socialIcons {
                 p {
                     margin-bottom: 1.2em;
-                    font-size: 13px;
+                    font-size: 14px;
                     @include small {
                         margin-bottom: 1em;
                     }//small
@@ -36,7 +36,7 @@
                     margin-left: .5em;
                     max-height: 57px;
                     max-width: 57px;
-                    font-size: 13px;
+                    font-size: 14px;
                     @include xsmall {
                         img  {
                             max-width: 36px;
@@ -94,7 +94,7 @@
                         a {
                             color: $purpleM;
                             text-decoration: underline;
-                            font-size: 13px;
+                            font-size: 14px;
                             vertical-align: text-bottom;
                         } //a
 
@@ -110,6 +110,9 @@
             }//relatedLinks
                 
             #moreAboutUs {
+                i.material-icons {
+                    vertical-align: text-top;
+                }//material-icons
                 @include xsmall {
                     margin-bottom: 1em;
                 }
@@ -120,7 +123,13 @@
                
                 p {
                     color: lighten($black, 7);
-                    font-size: 13px;
+                    font-size: 15px;
+                    line-height: 24px;
+                    vertical-align: text-top;
+                    i.material-icons {
+                        font-size: 16px;
+                        vertical-align: middle;
+                    }
                 }
                 h5 {
                     .material-icons.md-dark {
