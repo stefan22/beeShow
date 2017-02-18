@@ -88,10 +88,11 @@ Bee Controls
 			  	context.clearRect(0,0,canvas.width, canvas.height);
 			  	window.location.reload();
 			  }
-
 		    
 		};//onkeydown
-	  
+
+
+		  
 
 	};//onclick
 
@@ -192,7 +193,6 @@ init function
 		bufferCanvasCtx.canvas.width = context.canvas.width;
 		bufferCanvasCtx.canvas.height = context.canvas.height;
 
-
 		//set interval timer -> add/shoot bees randomly to page
 		beeCannon = setInterval(addBee,200);
 		console.log('step:2 call addBee');
@@ -210,26 +210,43 @@ beeDraw function
 	function beeDraw() {
 		console.log('step4: entered beeDraw');
 		//canvas bg color
-		bufferCanvasCtx.fillStyle = "white";   //"rgba(255, 230, 255, 0.1)";	//purple
+		
+		bufferCanvasCtx.fillStyle = "white";   
 		bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
 		
 
 		//loop array
 		for (var i=0; i < beesArr.length; i++) {
 			//bees are colored here
-			//bufferCanvasCtx.fillStyle = "rgba(178, 102, 255, 0.75)";	
-			bufferCanvasCtx.fillStyle = "#400d63";	//#460d63
+			//bufferCanvasCtx.fillStyle = "#400d63";	//#460d63
+			//add some colors
+			for (var j=0; j<beesArr.length; j++) {
+			bufferCanvasCtx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
+										Math.floor(255 - 42.5 * j) + ', 0)';
+			}							
+			bufferCanvasCtx.stroke();
 			bufferCanvasCtx.fillRect(
 				beesArr[i].x,
 				beesArr[i].y,
 				beesArr[i].width,
 				beesArr[i].height
+
 			);//rect
 
 		}//for loop
 
 		//copy buffer
 		context.drawImage(bufferCanvas,0,0,bufferCanvas.width, bufferCanvas.height);
+
+		//circle
+		var circle = new Path2D();
+		
+		context.fillStyle = 'red';
+
+	    circle.moveTo(95, 12);
+	    circle.arc(120, 55, 55, 0, 5 * Math.PI);
+	    context.fill(circle);
+
 		
 
 	}//beeDraw	
