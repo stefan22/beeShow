@@ -69,6 +69,8 @@ Bee Controls
 		pre.innerHTML += "Commercials Intermission ..";
 		pre.innerHTML += "<br/>";
 		pre.innerHTML += "Canvas Slider Coming Soon!";
+		pre.innerHTML += "<br/>";
+		pre.innerHTML += "Press Z or X to Continue";
 		//grab elem in DOM and append child
 		//outer.appendChild(pre);	adding it at if statement.
 																	
