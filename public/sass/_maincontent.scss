@@ -137,6 +137,17 @@
         
         }//beeCanvas
 
+        .view {
+            position: absolute;
+            top: 10%;
+            right: 30%;
+            letter-spacing: 1px;
+            padding:2.5em;
+            text-align: center;
+            background-color: $botfobg;
+            border-radius: 5px;
+            width:60%;
+        }
         
         
        

@@ -47,6 +47,9 @@
 	//keyup-keydown event
 	var allowed = true;
 
+	//handle i need it for testing existence of elem too
+	var outer = document.getElementById('outercanvas');
+
 
 	
 	
@@ -54,32 +57,82 @@
 Bee Controls
 ******/	
 
+	function preview() {
+		
+		//this here so that it would hold class while created!!
+		var some = this;
+		//new elem
+		var pre = document.createElement('h1');
+		pre.className = 'view';
+		pre.innerHTML = "Canvas Cleared";
+		pre.innerHTML += "<br/>";
+		pre.innerHTML += "Commercials Intermission ..";
+		pre.innerHTML += "<br/>";
+		pre.innerHTML += "Canvas Slider Coming Soon!";
+		//grab elem in DOM and append child
+		//outer.appendChild(pre);	adding it at if statement.
+																	
+		//test for existence of elem outer | calling preview from multiple places in function
+		//below	
+		//if not 7 count childnodes and last elem child class name isn't view											
+		if(outer.childNodes.length != 7 && outer.lastElementChild.className != "" || outer.lastElementChild.className != "view") {
+			//adding it for the first time here.
+			outer.appendChild(pre);	
+			
+		}
+		//else
+		else {
+			//otherwise removing elem h1.view
+			//need to grab handle inside outer
+			var tar = document.getElementById('outercanvas').childNodes[6];
+			outer.removeChild(tar);
+			
+		}
+
+		
+		
+
+	}//preview
+
+
+
 	//on click Bee clears Canvas, Z reload same settings, X re-shuffle bees
 	ibee.onclick = function() {
 		//clear canvas method
 		context.clearRect(0,0,canvas.width, canvas.height);
+		//add preview while canvas empty
+		preview();
 		//press z to re-run function after canvas removed
 		document.onkeydown = function(e) {
-			  e.preventDefault();
+			 
 
-			   if (e.keyCode === 90) {
-				// re-run function so long canvas has been clear	   
+			   if (e.keyCode === 90) {		//pressed Z
+					//check for h1.view elem && run preview if it exists
+					if(outer.childNodes.length == 7 && outer.lastElementChild.className == "view")  { 
+				    	//run to remove it
+				    	preview();
+				    }
 				   init();
 
 			   }//if pressed z reload
 
 			  //re-shuffle bees X
-			  else if(e.keyCode == 88) {
-			  	context.clearRect(0,0,canvas.width, canvas.height);
-		  		beesArr = [];
-		  		qcount = 0;		
-				wcount = 0;		
-				dcount = 0;		
-				count = 0;
-				id=0;
-				beeCannon = null;
-				beeCannon2 = null;
-			  	init();
+			  else if(e.keyCode == 88) {	//pressed X
+			  		//check for h1.view elem && run preview if it exists
+					if(outer.childNodes.length == 7 && outer.lastElementChild.className == "view")  { 
+				    	//run to remove it
+				    	preview();
+				    }
+			  	
+			  		beesArr = [];
+			  		qcount = 0;		
+					wcount = 0;		
+					dcount = 0;		
+					count = 0;
+					id=0;
+					beeCannon = null;
+					beeCannon2 = null;
+				  	init();
 			  }
 		  
 

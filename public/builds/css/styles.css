@@ -853,15 +853,27 @@ body #mainWrapper #wrapper #top #skip #mainmenu #primary-nav ul #nav-six .dropdo
   z-index: -10000;
   padding: .35em;
 }
-/* line 149, ../../sass/_maincontent.scss */
+/* line 140, ../../sass/_maincontent.scss */
+#mainContent #outercanvas .view {
+  position: absolute;
+  top: 10%;
+  right: 30%;
+  letter-spacing: 1px;
+  padding: 2.5em;
+  text-align: center;
+  background-color: #f7fcd4;
+  border-radius: 5px;
+  width: 60%;
+}
+/* line 160, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea {
   margin-bottom: 2em;
 }
-/* line 151, ../../sass/_maincontent.scss */
+/* line 162, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea .headline {
   margin-bottom: .5em;
 }
-/* line 153, ../../sass/_maincontent.scss */
+/* line 164, ../../sass/_maincontent.scss */
 #mainContent #mainbottom .apiarea .headline i.material-icons {
   color: #a62319;
   font-size: 24px;
