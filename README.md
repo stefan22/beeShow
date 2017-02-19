@@ -20,7 +20,7 @@
    <br />
   
   <kbd>bees canvas</kbd>
-  ![bees-on-canvas-](public/builds/assets/images/beescanvas.png?raw=true "mobile" target="_blank")
+  ![bees-on-canvas-](public/builds/assets/images/newcanvas.png?raw=true "mobile" target="_blank")
 
 
 
