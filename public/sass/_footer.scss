@@ -8,6 +8,13 @@
     #topfoot.container {
         /* dont add padding!*/
         #footer-content {
+            @include xsmall {
+                .subfoot p {
+                    font-size: 13px !important;
+                    line-height: 24px;
+                }//subfoot p
+
+            }//xsmall
             margin:3em 0;
             h5 {
                 margin-bottom: .75em;
@@ -20,11 +27,23 @@
                 }//xsmall
             }
             #socialIcons {
+                @include xsmall {
+                    font-size: 13px !important;
+                        h5 {
+                            font-size: 18px !important;
+                            i.material-icons.md-dark {
+                                font-size: 18px !important;
+                                line-height: 98%;
+                            }
+                        }//h5
+                    }
+
                 p {
                     margin-bottom: 1.2em;
                     font-size: 14px;
                     @include small {
                         margin-bottom: 1em;
+
                     }//small
                 } //p
                 a {
@@ -74,7 +93,7 @@
                 } 
                 @include xsmall {
                     h5 {
-                        font-size:20px;
+                        font-size:18px;
                         i.material-icons.md-dark {
                             font-size: 18px;
                         }//icons
@@ -94,6 +113,9 @@
                         a {
                             color: $purpleM;
                             text-decoration: underline;
+                            @include xsmall {
+                                font-size: 13px !important;
+                            }
                             font-size: 14px;
                             vertical-align: text-bottom;
                         } //a
@@ -127,6 +149,10 @@
                     line-height: 24px;
                     vertical-align: text-top;
                     i.material-icons {
+                        @include xsmall {
+                            font-size: 12px !important;
+                            line-height: 17px;
+                        }//xsmall
                         font-size: 16px;
                         vertical-align: middle;
                     }
@@ -171,10 +197,21 @@
                     }//img    
                     }//small
                     @include xsmall {
-                        padding-top: .3em;
+
+                         padding:0;
+                        padding-top: .5em;
+                        img   { 
+                            max-width: 45px !important;
+                            margin-left: 10px;
+                        }//img
+                        &.col-xs-3.col-sm-4.col-md-2 {
+                            width:18% !important;
+                        }//col-xs-3
                     }//xsmall
                 } //bottomlogo
                 .copyright {
+                    padding-left: 0px;
+                    padding-right: 0px;
                     text-align: right;
                     vertical-align: middle;
                     line-height: 73.25px;
@@ -183,22 +220,22 @@
                     font-size: 13px;
                     color:lighten($purpleM,5);
                     .fcee  {
-                        vertical-align: text-top;
-                        line-height: 26px;
-                        font-size: 22px;
+                        vertical-align: -webkit-baseline-middle;
+                        line-height: 22px;
+                        font-size: 14px;
                         color: darken($white,50);
                     }//fcee
                    
                     @include small {
-                        line-height: 18px;
+                        line-height: 17px;
                         font-size: 12px;
                         vertical-align: middle;
                         padding-top: 20px;
                         min-height: 30px;
                     }//small
                     @include xsmall {
-                        padding-top:10px !important;
-                        line-height: 18px;
+                        padding-top:17px !important;
+                        line-height: 17px;
                         font-size: 12px;
                     }//xsmall
                     .myself {
@@ -214,6 +251,7 @@
                         }//small
                         @include xsmall {
                             float:right;
+                            font-size: 12px !important;
                         }//xsmall
                     } //myself
                     span.braggSection {
@@ -243,7 +281,8 @@
                         @include xsmall {
                                 .city {
                                     color:darken($white,5);
-                                    float:right;
+                                    float:none;
+                                    margin-left: .25em;
                                 }//city
                                 .year {
                                     float:right;
@@ -259,7 +298,7 @@
                                 line-height: 12px;
                             }//small
                             @include xsmall {
-                                margin-left:.3em; 
+                                margin-left:-.35em; 
                                
                             }//xsmall
 
