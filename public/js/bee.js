@@ -206,7 +206,7 @@ Bee function
 
 	}//getHealth
 
-	console.log()
+	//console.log()
 
 	//bee functions| getHit (substract from health)
 	Bee.prototype.getHit = function() {
@@ -231,7 +231,7 @@ init function
 
 	function init() {
 
-		console.log('step1: enter init');
+		//console.log('step1: enter init');
 
 		//handle dom
 		canvas = document.getElementById('beeCanvas');
@@ -250,7 +250,7 @@ init function
 
 		//set interval timer -> add/shoot bees randomly to page
 		beeCannon = setInterval(addBee,200);
-		console.log('step:2 call addBee');
+		//console.log('step:2 call addBee');
 		beeDraw();
 		//calling beeDraw
 		beeCannon2 = setInterval(beeDraw,100);
@@ -263,7 +263,7 @@ beeDraw function
 ******/
 
 	function beeDraw() {
-		console.log('step4: entered beeDraw');
+		//console.log('step4: entered beeDraw');
 		//canvas bg color
 		
 		//bufferCanvasCtx.fillStyle = "white";   
@@ -328,7 +328,7 @@ addBee function
 
 
 	function addBee() {
-		console.log('step:3 enter addBee');
+		//console.log('step:3 enter addBee');
 		
 		function addToArr(obj) {
 
@@ -344,7 +344,7 @@ addBee function
 					obj.health = 100;
 					obj.id = id;
 					beesArr.push(obj);
-					console.log(obj);						
+					//console.log(obj);						
 
 				}//drones
 
@@ -358,7 +358,7 @@ addBee function
 					obj.health = 75;
 					obj.id = id;
 					beesArr.push(obj);
-					console.log(obj);	
+					//console.log(obj);	
 
 				}//workers
 
@@ -372,7 +372,7 @@ addBee function
 					obj.health = 50;
 					obj.id = id;
 					beesArr.push(obj);
-					console.log(obj);	
+					//console.log(obj);	
 
 				}//queens
 
@@ -393,7 +393,7 @@ addBee function
 
 
 		//Adding all bees with for loops
-		console.log('beegate - bee creation begins');
+		//console.log('beegate - bee creation begins');
 		//debugger;
 		for(var i=0; i< mxdb; i++) {
 			addToArr(new Bee("dBee"));
@@ -416,9 +416,9 @@ addBee function
 
 	
 	
-	console.log('qcounter: ' + qcount);
-	console.log('wcounter: ' + wcount);
-	console.log('dcounter: ' + dcount);
+	//console.log('qcounter: ' + qcount);
+	//console.log('wcounter: ' + wcount);
+	//console.log('dcounter: ' + dcount);
 
 	//fire up init//
 	document.addEventListener('DOMContentLoaded', init, false);

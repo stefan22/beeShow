@@ -2,7 +2,15 @@
 -------------------------------- */
 
 #mainContent {
-    
+    @include xsmall {
+        div.container-fluid {
+            padding:0 !important;
+            #beeOpen.col-sm-12.col-md-10  {
+                padding:0 20px !important;
+                transition:height .5s, padding .22s;
+            }//beeOpen
+        }
+    }
     &:focus {
         outline: none;
     }
@@ -56,6 +64,7 @@
 
             margin: 2em 0;
             .headline> {
+
                 margin-bottom: .5em;
                 i.material-icons {
                     color: $lightred;
@@ -67,8 +76,33 @@
         } //apiarea
     } //mainmiddle
 
-    #mainmiddle2  {
 
+  
+
+    #mainmiddle2  {
+        @include xsmall {
+            h3.headline {
+                padding: 0 10px;
+                font-size: 28px;
+                line-height: 130%;
+                margin-bottom: .4em;
+                color: #a62319;
+
+            }//h3.headline
+            table caption {
+                padding: 0 10px;
+            }//table caption
+
+            height: 137px !important;
+            overflow: hidden;
+            margin-bottom: 1.0em;
+            table.table {
+                background:transparent !important;
+            }//table
+
+           
+
+        }//xsmall
         table.table {
             background-color: rgba(235, 235, 240, 0.35);
         }
@@ -88,10 +122,19 @@
         opacity: .95;
         border-radius: 4px;
         @include xsmall {
+            border:none !important;
+            margin-bottom: 2em !important;
+            canvas#beeCanvas {
+
+            }//canvas#beeCanvas
+            span {
+                padding:0 !important;
+                margin-top: 3.5em;
+            }//span
             img#ibee {
                 max-width: 45px !important;
-                right: 57px !important;
-                bottom:45px !important;
+                right: 177px !important;
+                bottom:62px !important;
             }//img
         }//xsmall
         img#ibee {

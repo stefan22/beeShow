@@ -1,13 +1,31 @@
 (function() {
-//inserts year in the footer dynamically
+
+/*****
+ Globals
+******/
+
+var sideNav = document.querySelector('section.apiarea');
+//entire div
+var beeRules = document.getElementById('mainmiddle2');
+//bee rules title
+var beeTitle = document.getElementsByClassName('headline')[1];
+
+
+
+/*****
+Inserts year in the footer dynamically
+******/ 
+
 var footersYear = function() {
 	var today = new Date();
 	var year = today.getFullYear();
 	document.getElementById('fyear').textContent = year;
 }
-//call it 
 
-var sideNav = document.querySelector('section.apiarea');
+
+/*****
+ Side navigation   
+******/
 
 function openNav() {
     var aprire = document.getElementById('aprire');
@@ -61,6 +79,69 @@ function closeNav() {
 
     
 }
+
+
+
+/*****
+Bee Rules Headline (#mainmiddle2) Section When WinScreen 375 or less
+******/ 
+
+
+
+
+//while screen width is equal or less than
+if (window.screen.width <= 385) {
+
+    function beeRule(e) {
+        console.log('clcka');
+        console.log(e.currentTarget);
+        var tar = e.currentTarget;
+
+        switch (tar.id ) {
+            case "beeOpen" :
+                e.currentTarget.setAttribute('id', 'mainmiddle2');
+                break;
+            case "mainmiddle2" :
+                e.currentTarget.setAttribute('id', 'beeOpen');
+                break;
+        }
+
+    }
+
+/****************************************************
+Making a click event work on  small screens
+AddEventListener caused so many problems here
+Made it work with this event/function call. Unlike
+eventlisteners only handle one function which sometimes
+could be useful.
+*****************************************************/
+//target entire section and cruise down the dom
+beeRules.onclick = beeRule;
+   
+}//if window.screen.width
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

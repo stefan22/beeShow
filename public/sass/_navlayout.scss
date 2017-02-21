@@ -71,7 +71,9 @@ header#header {
 } //header
 #mainmenu {
     
-    @include small {}
+    @include xsmall {
+        margin-bottom: 1em;
+    }
     min-height: 56px;
     background: #4d115a;
    
@@ -178,10 +180,11 @@ header#header {
                 } //small
             } //nav-five a
             #nav-six {
+                transition:all,2s;
                  @include small {
                     a.dropdown-toggle {
                         &:focus {
-                           background-color: lighten($lightred, 3); 
+                           //background-color: lighten($lightred, 3); 
                        }//focus
                        &:active {
                             background-color: lighten($lightred, 3);
@@ -200,18 +203,24 @@ header#header {
                 
                 a.dropdown-toggle:visited,
                 a.dropdown-toggle {
+                    transition:all,2s;
                     background-color: rgb(111, 22, 134);        
                     border-top: 1px solid purple;
                    
                 }
                 .dropdown-menu>li>a:focus,
                 .dropdown-menu>li>a {
-                    background-color: #74198c;
+                    transition:all,2s;
+                    &:hover {
+                        background-color: #4d115a;
+                    }
+                    //background-color: #74198c;
                 } //dropdown-menu li a focus
                 .nav .open>a:focus {
-                    background-color: lighten($lightred, 3);
+                    //background-color: lighten($lightred, 3);
                 } //nav open a:focus
                 ul.dropdown-menu {
+                    transition:height,2s;
                     min-width: 120px;
                     top: 101%;
                     background-color: rgba(77, 17, 90, 0.92);
