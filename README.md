@@ -70,7 +70,7 @@
   <br />
   
   <kbd>iphone6</kbd> 
-  ![bees page](mob6top.png?raw=true "mobile" target="_blank")
+  ![bees page](public/builds/assets/images/mob6top.png?raw=true "mobile" target="_blank")
   
   
   
@@ -79,7 +79,7 @@
   <br />
   
   <kbd>iphone6</kbd> 
-  ![bees page](mob6.png?raw=true "mobile" target="_blank")
+  ![bees page](public/builds/assets/images/mob6.png?raw=true "mobile" target="_blank")
   
   
   
