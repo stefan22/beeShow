@@ -61,4 +61,33 @@
   
   <kbd>console</kbd> could it have done this earlier
   ![bees page](console1.png?raw=true "mobile" target="_blank")
+  
+  
+  
+  
+  <hr />
+  
+  <br />
+  
+  <kbd>iphone6</kbd> 
+  ![bees page](public/builds/assets/images/mob6top.png?raw=true "mobile" target="_blank")
+  
+  
+  
+  <hr />
+  
+  <br />
+  
+  <kbd>iphone6</kbd> 
+  ![bees page](public/builds/assets/images/mob6.png?raw=true "mobile" target="_blank")
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 

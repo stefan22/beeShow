@@ -148,10 +148,11 @@ Bee Controls
 			   if (e.keyCode === 90) {		//pressed Z
 					//check for h1.view elem && run preview if it exists
 					if(outer.childNodes.length == 7 && outer.lastElementChild.className == "view")  { 
-						//run to remove it	
+						//clear border time interval first
 				    	borderBlink(clearInterval(preInter));
+				    	//run to remove it	
 				    	preview();
-				    	//clear border time interval first
+				    	
 
 							
 				    }
@@ -163,10 +164,10 @@ Bee Controls
 			  else if(e.keyCode == 88) {	//pressed X
 			  		//check for h1.view elem && run preview if it exists
 					if(outer.childNodes.length == 7 && outer.lastElementChild.className == "view")  { 
+				    	//clear border time interval first
+				    	borderBlink(clearInterval(preInter));
 				    	//run to remove it	
 				    	preview();
-				    	//clear border time interval first
-						clearInterval(preInter);	
 				    }
 			  	
 			  		beesArr = [];
@@ -184,11 +185,8 @@ Bee Controls
 			  //hard reset
 			  else if(e.keyCode == 80) {
 				  	context.clearRect(0,0,canvas.width, canvas.height);
-				  	//clear border time interval first
-					//run to remove it	
-			    	preview();
-			    	//clear border time interval first
-					clearInterval(preInter);	
+				  	this.location.reload();
+			    	
 			  }
 		    
 		};//onkeydown
