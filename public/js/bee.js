@@ -26,6 +26,8 @@
 	//timer
 	var beeCannon = null;
 	var beeCannon2 = null;
+	//border blink
+	var preInter = null;
 
 	
 	//initiliaze counters
@@ -51,6 +53,31 @@
 	var outer = document.getElementById('outercanvas');
 
 
+/*****
+BorderTimerOnCanvasPreview
+******/	
+
+	function borderBlink(arg) {
+		//call from preview function
+		//clears timeout at key down events | reload of canvas
+		preInter = setInterval(function() {
+				//existing  page border for canvas
+			if (outer.style.border == "1px solid rgba(197, 140, 255, 0.6)") {
+
+					outer.style.border = "";
+			
+			} else {
+				outer.style.border = "1px solid rgba(197, 140, 255, 0.6)";
+			}
+
+			
+		},1000);
+
+
+	}//borderBlink funct
+	
+
+
 	
 	
 /*****
@@ -58,7 +85,8 @@ Bee Controls
 ******/	
 
 	function preview() {
-		
+		//border handle
+	
 		//this here so that it would hold class while created!!
 		var some = this;
 		//new elem
@@ -91,6 +119,14 @@ Bee Controls
 			
 		}
 
+		//call border blink
+		borderBlink();
+
+
+		
+
+
+
 		
 		
 
@@ -106,13 +142,18 @@ Bee Controls
 		preview();
 		//press z to re-run function after canvas removed
 		document.onkeydown = function(e) {
-			 
+		
+	 
 
 			   if (e.keyCode === 90) {		//pressed Z
 					//check for h1.view elem && run preview if it exists
 					if(outer.childNodes.length == 7 && outer.lastElementChild.className == "view")  { 
-				    	//run to remove it
+						//run to remove it	
+				    	borderBlink(clearInterval(preInter));
 				    	preview();
+				    	//clear border time interval first
+
+							
 				    }
 				   init();
 
@@ -122,8 +163,10 @@ Bee Controls
 			  else if(e.keyCode == 88) {	//pressed X
 			  		//check for h1.view elem && run preview if it exists
 					if(outer.childNodes.length == 7 && outer.lastElementChild.className == "view")  { 
-				    	//run to remove it
+				    	//run to remove it	
 				    	preview();
+				    	//clear border time interval first
+						clearInterval(preInter);	
 				    }
 			  	
 			  		beesArr = [];
@@ -140,11 +183,16 @@ Bee Controls
 
 			  //hard reset
 			  else if(e.keyCode == 80) {
-			  	context.clearRect(0,0,canvas.width, canvas.height);
-			  	window.location.reload();
+				  	context.clearRect(0,0,canvas.width, canvas.height);
+				  	//clear border time interval first
+					//run to remove it	
+			    	preview();
+			    	//clear border time interval first
+					clearInterval(preInter);	
 			  }
 		    
 		};//onkeydown
+
 
 
 		  

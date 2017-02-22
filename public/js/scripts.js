@@ -113,7 +113,7 @@ Making a click event work on  small screens
 AddEventListener caused so many problems here
 Made it work with this event/function call. Unlike
 eventlisteners only handle one function which sometimes
-could be useful.
+could be useful
 *****************************************************/
 //target entire section and cruise down the dom
 beeRules.onclick = beeRule;
