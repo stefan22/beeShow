@@ -1,93 +1,20 @@
-## beeShow  :honeybee:   added it online - remains animating bees
+# Hays A/B test
+- website url: https://www.hays.co.uk
+- page target: job details page
+- modifications: (refer to screenshot for further details)
 
-
-- git clone
-- npm,bower,bundler dependencies
-- type grunt
-
-
-
-  
-<hr />
-  
-  <br />
-  
-  <kbd>bees-on-canvas</kbd>
-  ![bees-on-canvas-](public/builds/assets/images/beesoncanvas.png?raw=true "mobile" target="_blank")
-  
-  
-  <hr />
-   <br />
-  
-  <kbd>bees canvas</kbd>
-  ![bees-on-canvas-](public/builds/assets/images/newcanvas.png?raw=true "mobile" target="_blank")
-
-
-
-
-
-<hr />
-  
-  <br />
-  
-  <kbd>topsection</kbd>
-  ![topsection](public/builds/assets/images/topsection.png?raw=true "mobile" target="_blank")
-
-
-
-<hr />
-  
-  <br />
-  
-  <kbd>side-navigation</kbd>
-  ![side-navigation](public/builds/assets/images/sidenavigation.png?raw=true "mobile" target="_blank")
-
-
-
-  
-  
-  <hr />
-  
-  <br />
-  
-  <kbd>bottom-bees-pg</kbd> sticky footer
-  ![bees page](bottombee.png?raw=true "mobile" target="_blank")
-  
-  
-  
-   <hr />
-  
-  <br />
-  
-  <kbd>console</kbd> could it have done this earlier
-  ![bees page](console1.png?raw=true "mobile" target="_blank")
-  
-  
-  
-  
-  <hr />
-  
-  <br />
-  
-  <kbd>iphone6</kbd> 
-  ![bees page](public/builds/assets/images/mob6top.png?raw=true "mobile" target="_blank")
-  
-  
-  
-  <hr />
-  
-  <br />
-  
-  <kbd>iphone6</kbd> 
-  ![bees page](public/builds/assets/images/mob6.png?raw=true "mobile" target="_blank")
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
+    - on page load add another button - next to 'apply now'
+    - button: label: 'talk to a consultant'
+    - button: on click add popup and overlay
+    - popup: to fetch location and consultans name from sidenav
+    - center popup on window and on screen resize event
+    - button's removed with a mouse click anywhere outside of popup
+    
+- test code working correctly on live website
+- cross browser testing on:
+   * Chrome, 
+   * Firefox, 
+   * IE9 and 
+   * Opera web clients.
+   
+- push code to github
