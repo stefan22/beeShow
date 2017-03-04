@@ -7,46 +7,13 @@
 /* grabs google fonts
 --------------------------------------------     */
 
-//urls
-$url_0: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:assets/logo-twigkit.png);
-$url_1: url(../../../assets/hero-tablet-bg.jpg);
-$url_2: url(/assets/images/email_Native.png);
-$url_3: url(/assets/images/icon_dropbox.png);
-$url_4: url(/assets/images/icon_kuaipan.png);
-$url_5: url(/assets/images/icon_googledrive.png);
-$url_6: url(/assets/images/icon_onedrive.png);
-$url_7: url(/assets/images/icon_hdd.png);
-$url_8: url(/assets/images/icon_android.png);
-$url_9: url(/assets/images/icon_hays.png);
-$url_10: url(/assets/images/icon_linkedin.png);
-$url_11: url(/assets/images/icon_seek.png);
-$url_12: url(/assets/images/icon_indeed.png);
-$url_13: url(/assets/images/tick.png);
-$url_14: url(/assets/images/dropbox.jpg);
-$url_15: url(/assets/images/google_drive.jpg);
-$url_16: url(/assets/images/local_drive.jpg);
-$url_17: url(/assets/images/ts_icon_sprite.png);
-$url_18: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.eot);
-$url_19: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.eot#iefix);
-$url_20: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.woff);
-$url_21: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.ttf);
-$url_22: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.svg#twigkit);
-$url_23: url(../../../assets/fonts/hays.eot);
-$url_24: url(../../../assets/fonts/hays.eot#iefix);
-$url_25: url(../../../assets/fonts/hays.woff);
-$url_26: url(../../../assets/fonts/hays.ttf);
-$url_27: url(../../../assets/fonts/hays.svg#hays);
-$url_28: url(../../../assets/logo-hays-long.png);
-$url_29: url(../../../assets/images/hays_desktop.gif);
-$url_30: url(../../../assets/logo-hays-short.png);
-$url_31: url(../../../assets/Hays-Response-Logo.png);
-$url_32: url(../../../assets/Hays-Response-Desktop-Logo.png);
-
+@import url('https://fonts.googleapis.com/css?family=Nobile');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 /* sets primary & secondary fonts
 ----------------------------------------------   */
-$font-primary: sans-serif, Helvetica, Arial;
-$font-secondary: Helvetica, Geneva, sans-serif;
+$font-primary: 'Nobile', serif, arial;
+$font-secondary: 'Merriweather', serif, arial;
 
 /* to extend primary font
 -------------------------  */
@@ -83,3 +50,167 @@ $font-secondary: Helvetica, Geneva, sans-serif;
     -webkit-font-smoothing: antialiased;
     vertical-align: middle;
 }
+
+/*
+------------------------------
+sticky footer
+------------------------------
+*/
+
+html {
+	width:100%;
+	height: 100%;
+	display: table;
+}
+
+body {
+	width: 100%;
+	display: table-cell;
+	min-height: 100%;
+}
+
+html,body {
+	margin:0;
+	padding: 0;
+}
+
+
+
+
+
+#mainFooter, #mainContent:after {
+	min-height: 312px;
+	 
+}
+
+#mainFooter {
+	margin-top:-312px;
+}
+
+#mainContent {
+	
+	/* equal to footer height */
+  	margin-bottom: -312px;
+}
+
+#mainContent:after {
+	content: "";
+	display: block;
+}
+
+/*
+-----------------------------
+	main headings
+-----------------------------
+*/
+
+h1,h2,h3,h4,h5,h6 {
+	@extend %basefontPrimary;	
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 140%;
+	@extend %basefontPrimary;
+	color:lighten($black,5);
+	margin-bottom: .6em;
+	$contrasted-dark-default:$black;
+	$contrasted-light-default: $white;
+
+
+}
+
+h2 {
+	font-size: 32px;
+
+	line-height: 140%;
+	@extend %basefontPrimary;
+	color:$lightred;
+	margin-bottom: .5em
+}
+
+h3 {
+	
+	font-size: 28px;
+	line-height: 130%;
+	@extend %basefontPrimary;
+	margin-bottom: .4em;
+	color:$lightred;
+	$contrasted-dark-default:  $darkred;
+	$contrasted-light-default: $regcopy;
+	
+}
+
+h4 {
+	font-size: 24px;
+	line-height: 130%;
+	color:lighten($black,5);
+	margin-bottom: .3em;
+	@extend %basefontPrimary;
+
+}
+
+h5 {
+	font-size: 23px;
+	line-height: 120%;
+	color:$dpurple;
+	@extend %basefontPrimary;
+	margin-bottom: .3em;
+	
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 120%;
+	@extend %basefontPrimary;
+	margin-bottom: .3em;
+	color:$lightred;
+}
+
+
+p {
+	font-size: 15px;
+	line-height: 150%;
+	@extend %basefontSecondary;
+	color:lighten($black,7);
+	margin-bottom: .3em;
+	&:focus {
+		outline: none;
+	}
+	
+}
+
+
+a {
+	text-decoration: none;
+	cursor:pointer;
+	font-family: $font-secondary;
+	background:transparent;
+	font-size: 15px;
+	line-height: 150%;
+	@include animation('slide-down 5s 3');
+	color:darken($green,5);
+	&:focus {
+		outline:none;
+	}//focus
+	&:active {
+		outline: none;
+	}//active
+	&:hover {
+		color:darken($green,8);
+		outline: none;
+	}//hover
+}
+
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+	&:focus {
+		outline: none;
+	}
+
+}//img
+
+

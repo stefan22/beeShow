@@ -1,0 +1,130 @@
+/*
+---------------------------------------------
+side navigation
+---------------------------------------------
+*/
+
+/* 320 - 767  */
+@include small {
+	#mainmiddle1 {
+		display: none;
+	}
+  
+}//small
+
+@include xsmall {
+	#mainmiddle1 {
+		display: none;
+	}
+
+}//under379
+
+#mainContent {
+	
+	#mainmiddle1 {
+		 
+		width: 15% !important;
+		padding: 0;
+		section.apiarea {
+			position: relative;
+			img  {
+				max-width: 27%;
+				margin-left: 15px;
+				display: inline-block;
+				position: absolute;
+				left: 5px;
+				top: 10px;
+
+			}//img
+			background-color: $botfoot;
+			margin:0;
+			min-height: 347px;
+			max-width: 285px;
+			border-bottom-left-radius: 0px;
+    		border-bottom-right-radius: 12px;
+			border:1px solid darken($purple,15);  /*440144*/
+
+			.curtain {
+				background-color: "transparent";
+				
+			}//curtain
+
+		}//section apiarea
+		.sidenavL {
+			.closebtn {
+				position: absolute;
+			    top: 10px;
+			    right: 35px;
+			    font-size: 36px;
+			    margin-left: 50px;
+			}//closebtn
+			height: 100%;
+		    width: 0;
+		    position: fixed;
+		    z-index: 1;
+		    top: 0;
+		    left: 0;
+		    background-color: rgba(21, 12, 49, 0.85);
+		    overflow-x: hidden;
+		    transition: all 0.5s;
+		    padding-top: 60px;
+			a {
+				padding: 8px 8px 8px 32px;
+			    text-decoration: none;
+			    font-size: 16px;
+			    color: #fbfbfb;
+			    display: block;
+			    transition: 0.3s
+
+			}//a
+			&:hover, .offcanvas a:focus {
+				color:#f1f1f1;
+			}//hover
+
+		}//sidenavL
+		#mainL {
+			display: inline-block;
+			
+			.panopen {
+				position: absolute;
+				left:-9999px;
+				opacity: 0;
+				transition:all 1s;
+
+			}//panopen
+			
+
+			.panclose {
+				position: absolute;
+				left:0;
+				opacity: 1;
+				transition:all 3s;
+
+			}//close
+			
+			a#sesame {
+				background:url('../assets/images/burger.png') no-repeat;
+				width: 29px;
+				height: 26px;
+				display: block;
+				vertical-align: middle;
+				line-height: 26px;
+				margin-left: 13.5em;
+				
+			}//button
+			
+    		padding: 16px;
+			h2 {
+				font-size: 26px;
+				line-height: 32px;
+			}//h2
+			p {
+				padding:15px 0;
+				font-size: 16px;
+				line-height: 22px;
+			}//p
+		}//main
+	}//mainmiddle1
+
+
+}//mainContent
