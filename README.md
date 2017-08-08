@@ -1,4 +1,4 @@
-## beeShow  :honeybee:   added it online - remains animating bees
+## beeShow  <kbd>:honeybee: </kbd>
 - git clone
 - npm,bower,bundler dependencies
 - type grunt
