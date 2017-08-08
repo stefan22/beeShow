@@ -1,14 +1,10 @@
 ## <kbd>the</kbd> beeShow  <kbd>:honeybee: </kbd>
+#### to clone:
 - git clone
 - npm,bower,bundler dependencies
 - type grunt
 
 
-
-  
-  
-
-  
   <kbd>bees-on-canvas</kbd>
   
   ![](public/builds/assets/images/beesoncanvas.png)
