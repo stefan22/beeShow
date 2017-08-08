@@ -5,7 +5,7 @@
 - type grunt
 
 
-  <kbd>bees-on-canvas</kbd>
+  <kbd>bees-on-canvas :honeybee:</kbd>
   
   ![](public/builds/assets/images/beesoncanvas.png)
   
@@ -13,7 +13,7 @@
   <hr />
    <br />
   
-  <kbd>bees canvas</kbd>
+  <kbd>bees canvas :honeybee:</kbd>
   
   ![bees-on-canvas-](public/builds/assets/images/newcanvas.png)
 
@@ -25,7 +25,7 @@
   
   <br />
   
-  <kbd>topsection</kbd>
+  <kbd>topsection :honeybee:</kbd>
   
   ![topsection](public/builds/assets/images/topsection.png)
 
@@ -35,7 +35,7 @@
   
   <br />
   
-  <kbd>side-navigation</kbd>
+  <kbd>side-navigation :honeybee:</kbd>
   
   ![side-navigation](public/builds/assets/images/sidenavigation.png)
 
@@ -47,7 +47,7 @@
   
   <br />
   
-  <kbd>bottom-bees-pg</kbd> sticky footer
+  <kbd>bottom-bees-pg :honeybee:</kbd> sticky footer
   
   ![bees page](bottombee.png)
   
@@ -57,7 +57,7 @@
   
   <br />
   
-  <kbd>console</kbd> could it have done this earlier
+  <kbd>console :honeybee:</kbd> could it have done this earlier
   
   ![bees page](console1.png)
   
@@ -68,7 +68,7 @@
   
   <br />
   
-  <kbd>iphone6</kbd> 
+  <kbd>iphone6 :honeybee:</kbd> 
   
   ![bees page](public/builds/assets/images/mob6top.png)
   
@@ -78,7 +78,7 @@
   
   <br />
   
-  <kbd>iphone6</kbd> 
+  <kbd>iphone6 :honeybee:</kbd> 
   
   ![bees page](public/builds/assets/images/mob6.png)
   
