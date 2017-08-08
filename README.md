@@ -1,6 +1,4 @@
 ## beeShow  :honeybee:   added it online - remains animating bees
-
-
 - git clone
 - npm,bower,bundler dependencies
 - type grunt
@@ -9,11 +7,11 @@
 
   
   
-  <br />
+
   
   <kbd>bees-on-canvas</kbd>
   
-  ![](public/builds/assets/images/beesoncanvas.png?raw=true "mobile" target="_blank")
+  ![](public/builds/assets/images/beesoncanvas.png)
   
   
   <hr />
@@ -21,7 +19,7 @@
   
   <kbd>bees canvas</kbd>
   
-  ![bees-on-canvas-](public/builds/assets/images/newcanvas.png?raw=true "mobile" target="_blank")
+  ![bees-on-canvas-](public/builds/assets/images/newcanvas.png)
 
 
 
@@ -33,7 +31,7 @@
   
   <kbd>topsection</kbd>
   
-  ![topsection](public/builds/assets/images/topsection.png?raw=true "mobile" target="_blank")
+  ![topsection](public/builds/assets/images/topsection.png)
 
 
 
@@ -43,7 +41,7 @@
   
   <kbd>side-navigation</kbd>
   
-  ![side-navigation](public/builds/assets/images/sidenavigation.png?raw=true "mobile" target="_blank")
+  ![side-navigation](public/builds/assets/images/sidenavigation.png)
 
 
 
@@ -55,7 +53,7 @@
   
   <kbd>bottom-bees-pg</kbd> sticky footer
   
-  ![bees page](bottombee.png?raw=true "mobile" target="_blank")
+  ![bees page](bottombee.png)
   
   
   
@@ -65,7 +63,7 @@
   
   <kbd>console</kbd> could it have done this earlier
   
-  ![bees page](console1.png?raw=true "mobile" target="_blank")
+  ![bees page](console1.png)
   
   
   
@@ -76,7 +74,7 @@
   
   <kbd>iphone6</kbd> 
   
-  ![bees page](public/builds/assets/images/mob6top.png?raw=true "mobile" target="_blank")
+  ![bees page](public/builds/assets/images/mob6top.png)
   
   
   
@@ -86,7 +84,7 @@
   
   <kbd>iphone6</kbd> 
   
-  ![bees page](public/builds/assets/images/mob6.png?raw=true "mobile" target="_blank")
+  ![bees page](public/builds/assets/images/mob6.png)
   
   
   
