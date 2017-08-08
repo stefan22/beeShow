@@ -1,4 +1,4 @@
-## beeShow  <kbd>:honeybee: </kbd>
+## <kbd>the</kbd> beeShow  <kbd>:honeybee: </kbd>
 - git clone
 - npm,bower,bundler dependencies
 - type grunt
